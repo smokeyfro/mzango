@@ -1,0 +1,90 @@
+
+.markdown {
+  p, ul, ol {
+    @apply mb-4;
+  }
+
+  h1 {
+    @apply text-4xl font-sans font-bold mb-5 leading-tight;
+  }
+  h2, h3, h4, h5, h6 {
+    @apply font-sans font-bold text-black my-6;
+  }
+
+  h5, h6 {
+    @apply uppercase;
+  }
+
+  h2 { @apply text-2xl; }
+  h3 { @apply text-xl; }
+  h4 { @apply text-lg; }
+  h5 { @apply text-base; }
+  h6 { @apply text-sm; }
+
+  @screen sm {
+    h2 { @apply text-4xl; }
+  }
+
+  a {
+    @apply text-black transition-color;
+
+    &:hover {
+      @apply text-gray-700;
+    }
+  }
+
+  mark {
+    @apply bg-yellow-300 px-2;
+  }
+
+  dl {
+    dt {
+      @apply text-black text-sm font-sans font-bold uppercase mb-2;
+      + dd {
+        @apply mb-4 pl-2;
+      }
+    }
+    dd {
+      @apply mb-4;
+    }
+  }
+
+  blockquote {
+    @apply border-l-4 border-gray-300 p-4 mb-4 mx-4 italic;
+
+    p {
+      @apply mb-0;
+    }
+  }
+
+  hr {
+    @apply h-px bg-gray-300 my-8;
+  }
+}
+
+@screen sm {
+  .markdown {
+    blockquote {
+      @apply mx-10;
+    }
+
+    h2 { @apply text-4xl; }
+    h3 { @apply text-3xl; }
+    h4 { @apply text-2xl; }
+    h5 { @apply text-xl; }
+    h6 { @apply text-base; }
+  }
+}
+
+.post-cover {
+  &::after {
+    @apply absolute w-full h-48 left-0 bottom-0 z-0;
+    content: '';
+    background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,.5) 100%);
+  }
+
+  &.fullscreen::after {
+    @apply h-full;
+    background: rgba(0,0,0,.15);
+  }
+}

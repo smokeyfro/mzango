@@ -1,0 +1,80 @@
+/*! purgecss start ignore */
+@import 'tailwindcss/base';
+/*! purgecss end ignore */
+
+@import 'components/resets';
+@import 'tailwindcss/components';
+@import 'components/markdown';
+@import 'tailwindcss/utilities';
+
+:root {
+    --primary-color: rgb(245, 35, 87);
+    --primary-alt-color: rgb(209, 35, 79);
+    --overlay-color: rgba(223, 17, 96, 0.753);
+    --bg: '../../../media/site/hero-pink.jpg';
+}
+
+.green {
+    --primary-color: rgb(60, 177, 36);
+    --primary-alt-color: rgb(46, 136, 28);
+    --overlay-color: rgba(59, 177, 36, 0.705);
+    --bg: '../../../media/site/hero-green.jpg';
+}
+
+.blue {
+    --primary-color: rgb(26, 151, 182);
+    --primary-alt-color: rgb(19, 121, 146);
+    --overlay-color: rgba(26, 151, 182, 0.678);
+    --bg: '../../../media/site/hero-blue.jpg';
+}
+
+.orange {
+    --primary-color: #f1a90c;
+    --primary-alt-color: #bd8308;
+    --overlay-color: #f1a80cb0;
+    --bg: '../../../media/site/hero-orange.jpg';
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 30px;
+}
+
+.grid-small {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 30px;
+}
+
+
+h1 {
+    @apply text-6xl font-bold mb-1;
+  }
+
+.list, 
+.list li {
+  padding: 0;
+  list-style: none;
+}
+
+.card a img {
+    transition: transform 1.5s ease;
+}
+.card:hover img {
+    transform: scale(1.1);
+}
+
+.layout-toggle .active {
+    background: #e4104a;
+}
+
+
+@media (min-width: 768px) {
+    .header li .active {
+        background: #000;
+        color: #fff;
+        border-radius: 30px;
+        padding: 5px 15px;
+    }
+}
