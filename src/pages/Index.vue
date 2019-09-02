@@ -5,7 +5,10 @@
       <g-image src="../../media/site/hero-pink.jpg" class="object-cover object-bottom h-full" />
     </div>
     <div class="h-screen flex items-center justify-center content-center">
-      <BasicSearch />
+      <div class="w-1/3 mx-auto text-center -mt-8">
+        <Hero class="w-full mb-6" />
+        <BasicSearch class="w-full" />
+      </div>
     </div>
     <main class="p-10 relative z-30 bg-white mx-10 shadow-2xl mb-10 rounded-lg">
       <div class="flex justify-between w-full">
