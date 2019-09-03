@@ -3,30 +3,24 @@
 
     <div class="">
       <div class="">
-        <h1>
-          Provinces
-        </h1>
+        <h1>Provinces</h1>
+        <p></p>
+      </div>
+    </div>
+    <div class="flex flex-wrap mt-10">
+      <div class="w-1/3 mb-5" v-for="item in $page.districts.edges" :key="item.node.id">
+        <h2 class="text-3xl sm:text-4xl leading-tight mb-1 sm:mb-2">
+          <g-link :to="`${item.node.path}`" class="text-black font-bold link">{{ item.node.title }}</g-link>
+        </h2>
       </div>
     </div>
 
-    <g-link 
-      :to="item.node.path"
-      v-for="item in $page.posts.edges" 
-      :key="item.node.id"
-      class=""
-    >
-      <div class="">
-        <h2 class="">{{ item.node.title }}</h2>
-        <p class="">{{ item.node.excerpt }}</p>
-      </div>
-    </g-link>
-      
   </Layout>
 </template>
 
 <page-query>
 query Provinces {
-	posts: allProvince {
+	districts: allProvince ( sortBy: "title", order: ASC ) {
     edges {
       node {
         id
@@ -40,12 +34,9 @@ query Provinces {
 </page-query>
 
 <script>
-import PlaceCard from '@/components/PlaceCard'
 
 export default {
-  components: {
-    PlaceCard
-  }
+
 }
 </script>
 
