@@ -8,6 +8,8 @@ latitude:
 website: 
 area_code: 
 postal_code: 
-district: Wild Coast
-province: Western Cape
+district: Amathole
+district_slug: amathole
+province: Eastern Cape
+province_slug: eastern-cape
 ---

@@ -8,6 +8,8 @@ latitude:
 website: 
 area_code: 
 postal_code: 
-district: Garden Route
+district: City of Johannesburg
+district_slug: city-of-johannesburg
 province: Gauteng
+province_slug: gauteng
 ---

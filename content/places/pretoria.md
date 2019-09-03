@@ -8,6 +8,8 @@ latitude:
 website: 
 area_code: 
 postal_code: 
-district: Garden Route
+district: Tshwane
+district_slug: tshwane
 province: Gauteng
+province_slug: gauteng
 ---

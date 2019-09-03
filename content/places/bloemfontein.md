@@ -8,8 +8,10 @@ latitude: -29.116667
 website: http://mangaung.co.za/
 area_code: 051
 postal_code: 9300
-district: Garden Route
-province: Western Cape
+district: Mangaung
+district_slug: mangaung
+province: Free State
+province_slug: free-state
 ---
 Situated at an altitude of 1,395 m above sea level, the city is home to approximately 520,000 residents and forms part of the Mangaung Metropolitan Municipality which has a population of 747,431. 
 

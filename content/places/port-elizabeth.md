@@ -9,5 +9,7 @@ website:
 area_code: 
 postal_code: 
 district: Garden Route
+district_slug: garden-route
 province: Eastern Cape
+province_slug: eastern-cape
 ---

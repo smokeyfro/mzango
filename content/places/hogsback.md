@@ -8,8 +8,10 @@ latitude: 32.5952
 website: na
 area_code: 044
 postal_code: 6560
-district: Garden Route
-province: Western Cape
+district: Amathole
+district_slug: amathole
+province: Eastern Cape
+province_slug: eastern-cape
 ---
 here are two (or maybe more) theories as how the village received its name. Some think it was named for Captain Hogg, Commander of Fort Michell. Some others think that it is because one of the three peaks that overlook the village, when seen from a certain angle, resembles a Hog's Back (A hog's back is a geological term describing this particular rock formation).
 
