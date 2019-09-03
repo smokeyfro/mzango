@@ -9,7 +9,7 @@ website:
 district: 
 district_slug: 
 province: Eastern Cape
-province_slug: Eastern Cape
+province_slug: eastern-cape
 place: Addo Escarpment
 videos: ['https://vimeo.com/172427230']
 ---
