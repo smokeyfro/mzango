@@ -1,5 +1,5 @@
 <template>
-  <Layout class="bg-white">
+  <Layout class="activities">
     <div>
       <header>
         <h1 class="text-4xl sm:text-5xl md:text-6xl font-sans font-bold mb-1">Things to Do</h1>
