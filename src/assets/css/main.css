@@ -7,6 +7,9 @@
 @import 'components/markdown';
 @import 'tailwindcss/utilities';
 
+postcss([ require('postcss-nested') ])
+postcss([ require('postcss-variables') ])
+
 :root {
     --primary-color: rgb(245, 35, 87);
     --primary-alt-color: rgb(209, 35, 79);
