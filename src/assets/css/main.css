@@ -63,6 +63,15 @@ article {
     background: url(../../../media/site/fade-right.png);
 }
 
+.bottom a{
+    @apply text-pink-500;
+}
+.bottom a:hover {
+    @apply text-black;
+    @apply border-b-2;
+}
+
+
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));

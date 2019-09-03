@@ -26,10 +26,10 @@
   }
 
   a {
-    @apply text-black transition-color;
+    @apply text-pink-500 transition-color;
 
     &:hover {
-      @apply text-gray-700;
+      @apply text-pink-900;
     }
   }
 
