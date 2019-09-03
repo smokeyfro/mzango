@@ -1,7 +1,6 @@
 import DefaultLayout from '~/layouts/Default.vue'
 import VueYouTubeEmbed from 'vue-youtube-embed'
 import VueStorage from 'vuestorage'
-import { store } from './store'
 
 // import VueWeatherWidget from 'vue-weather-widget';
 // import 'vue-weather-widget/dist/css/vue-weather-widget.css';
