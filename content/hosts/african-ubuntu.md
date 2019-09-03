@@ -13,7 +13,7 @@ latitude: ''
 address: ''
 telephone: 
 mobile: 
-email: ''
+email: email@domain.com
 website: ''
 image: "/media/hosts/african-ubuntu/african-ubuntu-backpackers-jeffreys-bay.jpg"
 gallery: []

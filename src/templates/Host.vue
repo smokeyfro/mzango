@@ -16,8 +16,7 @@
             <div class="mr-20 text-lg" v-if="$page.post.content" v-html="$page.post.content" />
           </div>
           <div class="w-1/2">
-          <h2>Contact Info</h2>
-
+            <h2>Contact Info</h2>
             <div class="mt-3 mb-2 flex flex-wrap justify-left w-full">
               <span class="mr-6 mb-3 inline-block" v-if="$page.post.telephone"><strong class="block">Telephone </strong>{{$page.post.telephone}} </span>
               <span class="mr-6 mb-3 inline-block" v-if="$page.post.mobile"><strong class="block">Mobile </strong>{{$page.post.mobile}} </span>
@@ -30,25 +29,25 @@
             </div>
           <h2>Accommodation</h2>
           <ul class="list flex flex-wrap justify-left">
-          <li class="mr-6 mb-3 inline-block" v-for="item in $page.post.accommodation_types" v-bind:key="item">
-            <svg xmlns="http://www.w3.org/2000/svg" class="text-green-700 inline -mt-1 mr-1" width="14" height="14" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" clip-rule="evenodd" viewBox="0 0 18 18">
-              <g fill="none" stroke="#000" stroke-width="2">
-                <path stroke-width="1.6" d="M16.8 8.069v.736c-.002 4.387-3.613 7.995-8 7.995-4.389 0-8-3.611-8-8 0-4.389 3.611-8 8-8 1.122 0 2.231.236 3.256.693"/>
-                <path stroke-width="1.6" d="M16.8 2.405l-8 8.008-2.4-2.4"/>
-              </g>
-            </svg> {{item}}
-          </li>
+            <li class="mr-6 mb-3 inline-block" v-for="item in $page.post.accommodation_types" v-bind:key="item">
+              <svg xmlns="http://www.w3.org/2000/svg" class="text-green-700 inline -mt-1 mr-1" width="14" height="14" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" clip-rule="evenodd" viewBox="0 0 18 18">
+                <g fill="none" stroke="#000" stroke-width="2">
+                  <path stroke-width="1.6" d="M16.8 8.069v.736c-.002 4.387-3.613 7.995-8 7.995-4.389 0-8-3.611-8-8 0-4.389 3.611-8 8-8 1.122 0 2.231.236 3.256.693"/>
+                  <path stroke-width="1.6" d="M16.8 2.405l-8 8.008-2.4-2.4"/>
+                </g>
+              </svg> {{item}}
+            </li>
           </ul>
           <h2>Facilities</h2>
           <ul class="list flex flex-wrap justify-left">
-          <li class="mr-6 mb-3 inline-block" v-for="item in $page.post.facilities" v-bind:key="item">
-             <svg xmlns="http://www.w3.org/2000/svg" class="text-green-700 inline -mt-1 mr-1" width="14" height="14" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" clip-rule="evenodd" viewBox="0 0 18 18">
-              <g fill="none" stroke="#000" stroke-width="2">
-                <path stroke-width="1.6" d="M16.8 8.069v.736c-.002 4.387-3.613 7.995-8 7.995-4.389 0-8-3.611-8-8 0-4.389 3.611-8 8-8 1.122 0 2.231.236 3.256.693"/>
-                <path stroke-width="1.6" d="M16.8 2.405l-8 8.008-2.4-2.4"/>
-              </g>
-            </svg> {{item}}
-          </li>
+            <li class="mr-6 mb-3 inline-block" v-for="item in $page.post.facilities" v-bind:key="item">
+              <svg xmlns="http://www.w3.org/2000/svg" class="text-green-700 inline -mt-1 mr-1" width="14" height="14" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" clip-rule="evenodd" viewBox="0 0 18 18">
+                <g fill="none" stroke="#000" stroke-width="2">
+                  <path stroke-width="1.6" d="M16.8 8.069v.736c-.002 4.387-3.613 7.995-8 7.995-4.389 0-8-3.611-8-8 0-4.389 3.611-8 8-8 1.122 0 2.231.236 3.256.693"/>
+                  <path stroke-width="1.6" d="M16.8 2.405l-8 8.008-2.4-2.4"/>
+                </g>
+              </svg> {{item}}
+            </li>
           </ul>
           </div>
         </div>

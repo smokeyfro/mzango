@@ -1,7 +1,7 @@
 ---
 title: Terra Kaya
 slug: terra-kaya
-excerpt: 'Terra kaya '
+excerpt: Terra kaya
 city: hogsback
 province: Eastern Cape
 province_slug: eastern-cape
@@ -11,11 +11,11 @@ place: Hogsback
 longitude: ''
 latitude: ''
 address: ''
-telephone: 
-mobile: 
-email: ''
+telephone: ''
+mobile: ''
+email: email@domain.com
 website: ''
-image: "/media/hosts/terra-khaya/terra-khaya-backpackers-hogsback.jpg"
+image: '/media/hosts/terra-khaya/terra-khaya-backpackers-hogsback.jpg'
 gallery: []
 volunteer_platform: None
 accepting_volunteers: false
@@ -26,5 +26,4 @@ instagram: ''
 accommodation_types: ['Dorms', 'Family Rooms', 'Private Rooms', 'Camping']
 facilities: ['Bar', 'Shared Kitchen', 'Free Tea & Coffee', 'Free Wifi', 'Free Parking', 'Paid Breakfast']
 ---
-
 Terra kaya content

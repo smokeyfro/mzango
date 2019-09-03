@@ -1,7 +1,7 @@
 ---
 title: Long Street Backpackers
 slug: long-street-backpackers
-excerpt: 'Ashanti content '
+excerpt: Long Street Backpackers is an old school, communal, traveller’s hostel in the heart of Cape Town. Here, we’re all about new friends, spontaneity and laid-back fun.
 city: cape-town
 province: Western Cape
 province_slug: western-cape
@@ -10,20 +10,20 @@ district_slug: city-of-cape-town
 place: Cape Town
 longitude: ''
 latitude: ''
-address: ''
-telephone: 
+address: 209 Long street
+telephone: '+270214230615'
 mobile: 
-email: ''
-website: ''
-image: "/media/hosts/ashanti/ashanti-backpackers-cape-town.jpg"
+email: info@longstreetbackpackers.co.za
+website: https://www.longstreetbackpackers.co.za
+image: "/media/hosts/long-street-backpackers/long-street-backpackers-cape-town.jpg"
 gallery: []
 volunteer_platform: WorkAway
 accepting_volunteers: true
 twitter: ''
-facebook: ''
+facebook: longstreetbackpackers
 messenger: ''
-instagram: ''
-accommodation_types: ['Dorms', 'Family Rooms', 'Private Rooms', 'Camping']
-facilities: ['Bar', 'Shared Kitchen', 'Free Tea & Coffee', 'Free Wifi', 'Free Parking', 'Paid Breakfast']
+instagram: longstreetbackpackers
+accommodation_types: ['Single Rooms', 'Double Rooms', 'Twin Rooms', 'Dorms', 'Family Rooms', 'Private Rooms']
+facilities: ['Bar', 'Braai', 'TV Room', 'Balcony', 'Courtyard', 'Shared Kitchen', 'Free Tea & Coffee', 'Free Wifi', 'Free Parking', 'Paid Breakfast', 'Group Activities']
 ---
 Ashanti content

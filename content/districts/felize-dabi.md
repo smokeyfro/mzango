@@ -1,7 +1,7 @@
 ---
-title: Overberg
-slug: overberg
-excerpt: Excerpt for the Overberg
-image: "garden-route.jpg"
+title: Felize Dabi
+slug: felize-dabi
+excerpt: Excerpt here
+image:
 ---
-Overberg content
+Content here

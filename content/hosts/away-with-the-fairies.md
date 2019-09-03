@@ -13,7 +13,7 @@ latitude: ''
 address: ''
 telephone: 
 mobile: 
-email: ''
+email: email@domain.com
 website: ''
 image: "/media/hosts/away-with-the-fairies/away-with-the-fairies-backpackers-hogsback.jpg"
 gallery: []

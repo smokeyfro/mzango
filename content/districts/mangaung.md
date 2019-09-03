@@ -1,7 +1,7 @@
 ---
-title: Overberg
-slug: overberg
-excerpt: Excerpt for the Overberg
-image: "garden-route.jpg"
+title: Mangaung
+slug: mangaung
+excerpt: Excerpt
+image: ""
 ---
-Overberg content
+Content

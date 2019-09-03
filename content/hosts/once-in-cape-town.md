@@ -1,7 +1,7 @@
 ---
 title: Once in Cape Town
 slug: once-in-cape-town
-excerpt: ' content '
+excerpt: Excerpt
 city: cape-town
 province: Western Cape
 province_slug: western-cape
@@ -11,11 +11,11 @@ place: Cape Town
 longitude: ''
 latitude: ''
 address: ''
-telephone: 
-mobile: 
-email: ''
+telephone: ''
+mobile: ''
+email: email@domain.com
 website: ''
-image: "/media/hosts/ashanti/ashanti-backpackers-cape-town.jpg"
+image: "/media/hosts/once-in-cape-town/once-in-cape-town-backpackers.jpg"
 gallery: []
 volunteer_platform: WorkAway
 accepting_volunteers: true

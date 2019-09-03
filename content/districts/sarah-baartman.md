@@ -1,7 +1,7 @@
 ---
-title: Overberg
-slug: overberg
-excerpt: Excerpt for the Overberg
-image: "garden-route.jpg"
+title: Sarah Baartman
+slug: sarah-baartman
+excerpt: Excerpt
+image: ""
 ---
 Overberg content

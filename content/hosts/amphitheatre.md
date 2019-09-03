@@ -13,7 +13,7 @@ latitude: ''
 address: ''
 telephone: 
 mobile: 
-email: ''
+email: email@domain.com
 website: ''
 image: "/media/hosts/amphitheatre/amphitheatre-backpackers-drakensberg.jpg"
 gallery: []

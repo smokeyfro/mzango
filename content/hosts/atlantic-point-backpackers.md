@@ -13,9 +13,9 @@ latitude: ''
 address: ''
 telephone: 
 mobile: 
-email: ''
+email: email@domain.com
 website: ''
-image: "/media/hosts/ashanti/ashanti-backpackers-cape-town.jpg"
+image: "/media/hosts/atlantic-point/atlantic-point-cape-town.jpg"
 gallery: []
 volunteer_platform: WorkAway
 accepting_volunteers: true

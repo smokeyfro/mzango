@@ -1,7 +1,6 @@
 ---
-title: Overberg
-slug: overberg
-excerpt: Excerpt for the Overberg
-image: "garden-route.jpg"
+title: Chris Hani
+slug: chris-hani
+excerpt: Excerpt
 ---
-Overberg content
+Content
