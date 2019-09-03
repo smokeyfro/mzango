@@ -52,7 +52,7 @@
 
 <page-query>
 query Posts {
-	hosts: allHost {
+	hosts: allHost(limit: 8) {
     edges {
       node {
         id
@@ -64,7 +64,7 @@ query Posts {
       }
     }
   },
-  magazine: allPost (perPage: 4) {
+  magazine: allPost (limit: 4) {
     edges {
       node {
         id
