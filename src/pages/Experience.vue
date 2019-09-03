@@ -13,17 +13,17 @@
         </div>
         <div class="layout-toggle flex items-center">
           <a class="cursor-pointer bg-black hover:bg-gray-700 text-white font-bold py-2 px-4 mx-px rounded-full rounded-tr-none rounded-br-none" v-on:click="layout = 'grid'" v-bind:class="{ 'active': layout == 'grid'}" title="Grid">Grid</a>
-          <a class="cursor-pointer bg-black hover:bg-gray-700 text-white font-bold py-2 px-4" v-on:click="layout = 'table'" v-bind:class="{ 'active': layout == 'table'}" title="Table">Table</a>
-          <a class="cursor-pointer bg-black hover:bg-gray-700 text-white font-bold py-2 px-4 mx-px" v-on:click="layout = 'list'" v-bind:class="{ 'active': layout == 'list'}" title="List">List</a>
+          <a class="cursor-pointer bg-black hover:bg-gray-700 text-white font-bold py-2 px-4" v-on:click="layout = 'list'" v-bind:class="{ 'active': layout == 'list'}" title="List">List</a>
+          <a class="cursor-pointer bg-black hover:bg-gray-700 text-white font-bold py-2 px-4 mx-px" v-on:click="layout = 'table'" v-bind:class="{ 'active': layout == 'table'}" title="Table">Table</a>
           <a class="cursor-pointer bg-black hover:bg-gray-700 text-white font-bold py-2 px-4 rounded-full rounded-tl-none rounded-bl-none" v-on:click="layout = 'map'" v-bind:class="{ 'active': layout == 'map'}" title="Map">Map</a>
         </div>
       </div>
       <section>
         <div v-if="layout === 'grid'" class="grid">
-          <attraction-card-small class="" v-for="edge in filteredAttractions" :key="edge.node.id" :post="edge.node" />
+          <attraction-card class="" v-for="edge in filteredAttractions" :key="edge.node.id" :post="edge.node" />
         </div>
-        <div v-if="layout === 'list'" class="list flex flex-wrap">
-          <attraction-list class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4" v-for="edge in filteredAttractions" :key="edge.node.id" :post="edge.node" />
+        <div v-if="layout === 'list'" class="grid">
+          <attraction-card-small class="" v-for="edge in filteredAttractions" :key="edge.node.id" :post="edge.node" />
         </div>
         <div v-if="layout === 'map'" class="map">
           <attraction-map v-for="edge in filteredAttractions" :key="edge.node.id" :post="edge.node" />
@@ -58,7 +58,7 @@
           id
           title
           excerpt
-          image (width: 80, height: 80, quality: 90)
+          image (width: 320, height: 200, quality: 90)
           place
           city
           province
@@ -73,7 +73,7 @@
 
 <script>
 import config from '~/.temp/config.js'
-import AttractionList from '@/components/AttractionList'
+import AttractionCard from '@/components/AttractionCard'
 import AttractionCardSmall from '@/components/AttractionCardSmall'
 import AttractionMap from '@/components/AttractionMap'
 import AttractionTable from '@/components/AttractionTable'
@@ -81,7 +81,7 @@ import AttractionPagination from '@/components/AttractionPagination'
 
 export default {
   components: {
-    AttractionList,
+    AttractionCard,
     AttractionCardSmall,
     AttractionMap,
     AttractionTable,

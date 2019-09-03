@@ -3,6 +3,9 @@
     <div>
       <h1 class="title" v-html="$page.post.title" />
       <div v-html="$page.post.excerpt" class="text-gray-800 text-xl mb-5 mr-20" />
+      <figure v-if="$page.post.image" class="rounded-lg overflow-hidden mb-10 w-full">
+        <g-image :src="$page.post.image" class="object-cover w-full"></g-image>
+      </figure>
       <div class="flex flex-wrap">
         <div class="w-1/2">
           <div v-html="$page.post.content" class="markdown mr-20" />
@@ -38,7 +41,7 @@ query Province ($path: String!, $slug: String!) {
     title
     excerpt
     content
-    image
+    image (width: 1500, height: 600, quality: 90)
   }
   places: allPlace(filter: { province_slug: { eq: $slug }}) {
     edges {

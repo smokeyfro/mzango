@@ -2,7 +2,7 @@
 title: Western Cape
 slug: western-cape
 excerpt: 'The Western Cape (Afrikaans: Wes-Kaap; Xhosa: iNtshona-Koloni) is a province of South Africa, situated on the south-western coast of the country. It is the fourth largest of the nine provinces and the third most populated.  About two-thirds of these inhabitants live in the metropolitan area of Cape Town, which is also the provincial capital. The Western Cape was created in 1994 from part of the former Cape Province.'
-image: "western-cape.jpg"
+image: "/media/provinces/western-cape/western-cape.jpg"
 longitude: ''
 latitude: ''
 ---

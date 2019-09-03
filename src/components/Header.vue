@@ -11,14 +11,14 @@
             </g-link>
             <nav class="mt-4 md:mt-0 hidden md:block">
             <ul class="flex justify-center font-semibold text-lg">
-                <li class="px-4"><g-link class="nav-places text-gray-900 inline-block py-1 px-4" to="/explore">City Guides</g-link></li>
-                <li class="px-4"><g-link class="nav-hosts text-gray-900 inline-block py-1 px-4" to="/stay">Places to Stay</g-link></li>
-                <li class="px-4"><g-link class="nav-actvities text-gray-900 inline-block py-1 px-4" to="/do">Things to Do</g-link></li>
-                <li class="px-4"><g-link class="nav-actvities text-gray-900 inline-block py-1 px-4" to="/experience">Places of Interest</g-link></li>
+                <li class="px-4"><g-link class="nav-places text-gray-900 inline-block py-1 px-4 hover:text-pink-500" to="/explore">City Guides</g-link></li>
+                <li class="px-4"><g-link class="nav-hosts text-gray-900 inline-block py-1 px-4 hover:text-pink-500" to="/stay">Places to Stay</g-link></li>
+                <li class="px-4"><g-link class="nav-actvities text-gray-900 inline-block py-1 px-4 hover:text-pink-500" to="/do">Things to Do</g-link></li>
+                <li class="px-4"><g-link class="nav-actvities text-gray-900 inline-block py-1 px-4 hover:text-pink-500" to="/experience">Places of Interest</g-link></li>
             </ul>
             </nav>
             <div class="social-links">
-                <g-link class="btn bg-transparent hover:bg-black hover:text-white text-black border border-black hover:border-transparent font-bold rounded-full px-5 py-2" to="/mag">Magazine</g-link>
+                <g-link class="btn bg-transparent hover:bg-black hover:text-white text-black border border-black hover:border-transparent font-bold rounded-full px-5 py-2" to="/magazine">Magazine</g-link>
                 <!-- <div class="layout-toggle flex">
                     <h1
                     v-text="`Current theme: ${ themeName }`"
