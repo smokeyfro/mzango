@@ -10,7 +10,7 @@ address: Hout Bay, Cape Town, 7806
 phone: 021 790 2730
 district: Cape Town
 district_slug: cape-town
-province: western-cape
+province: Western Cape
 province_slug: western-cape
 place: Houtbay
 ---

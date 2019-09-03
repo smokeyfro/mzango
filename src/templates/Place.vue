@@ -29,7 +29,7 @@
             <div v-if="$page.posts.edges" class="mt-20">
               <h2 class="font-sans font-bold text-black my-6 text-2xl sm:text-4xl">Related Articles</h2>
               <div class="grid mt-5">
-                <post-card-small class="" v-for="edge in $page.posts.edges" :key="edge.node.id" :post="edge.node" />
+                <post-card class="" v-for="edge in $page.posts.edges" :key="edge.node.id" :post="edge.node" />
               </div>
             </div>
           </div>
@@ -88,7 +88,7 @@ query Place ($path: String!, $slug: String) {
         author
         date (format: "DD MMMM YYYY")
         tags
-        image (width: 80, height: 80, quality: 90)
+        image (width: 400, height: 400, quality: 90)
         path
       }
     }
@@ -100,13 +100,13 @@ query Place ($path: String!, $slug: String) {
 <script>
 import HostCardSmall from '@/components/HostCardSmall'
 import AttractionCardSmall from '@/components/AttractionCardSmall'
-import PostCardSmall from '@/components/PostCardSmall'
+import PostCard from '@/components/PostCard'
 
 export default {
   components: {
     HostCardSmall,
     AttractionCardSmall,
-    PostCardSmall
+    PostCard
   },
   metaInfo () {
     return {

@@ -8,7 +8,7 @@
           <div v-html="$page.post.content" class="markdown mr-20" />
         </div>
         <div class="w-1/2">
-          <div v-if="$page.places.edges" class="mt-10">
+          <div v-if="$page.places.edges">
             <h2 class="text-3xl font-bold text-black">Towns / Cities</h2>
             <div class="grid mt-5 mb-10">
               <place-card-small class="" v-for="edge in $page.places.edges" :key="edge.node.id" :post="edge.node" />
