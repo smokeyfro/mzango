@@ -54,7 +54,8 @@ postcss([ require('postcss-variables') ])
 article {
     position: relative;
 }
-.card-meta:after {
+
+.card-meta.truncate:after {
     content: '';
     display: block;
     width: 60px;
@@ -86,18 +87,6 @@ article {
 .page-leave-active {
     opacity: 0;
 }
-
-
-  .list-item {
-    display: inline-block;
-  }
-  .list-enter-active, .list-leave-active {
-    transition: all .05s;
-  }
-  .list-enter, .list-leave-to /* .list-leave-active below version 2.1.8 */ {
-    opacity: 1;
-    transform: translateY(100px);
-  }
 
 .grid {
     display: grid;
@@ -133,6 +122,13 @@ h1 {
     background: #e4104a;
 }
 
+.card-meta {
+    background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0), 
+        rgba(0,0,0,1)
+    );
+}
 
 @media (min-width: 768px) {
     .header li .active {

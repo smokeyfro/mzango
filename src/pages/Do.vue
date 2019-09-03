@@ -3,10 +3,10 @@
     <div>
       <header>
         <h1 class="text-4xl sm:text-5xl md:text-6xl font-sans font-bold mb-1">Things to Do</h1>
-        <p class="text-grey-dark text-lg sm:text-3xl">Discover cool things to do.</p>
+        <p class="text-grey-dark text-lg sm:text-3xl">Whether you're a surfer, birder, adrenaline junkie, history buff, wine connoisseur or foodie - South Africa has it all. Plan your ulitimate trip using one of the starters below.</p>
       </header>
       <section class="mt-10 grid md:3-cols lg:4-cols xl:5-cols">
-        <activity-item v-for="edge in $page.posts.edges" :key="edge.node.id" :post="edge.node" />
+        <activity-card v-for="edge in $page.posts.edges" :key="edge.node.id" :post="edge.node" />
       </section>
       <pagination :info="$page.posts.pageInfo" v-if="$page.posts.pageInfo.totalPages > 1" />
     </div>
@@ -14,13 +14,12 @@
 </template>
 
 <script>
-import config from '~/.temp/config.js'
-import ActivityItem from '@/components/ActivityItem'
+import ActivityCard from '@/components/ActivityCard'
 import Pagination from '@/components/Pagination'
 
 export default {
   components: {
-    ActivityItem,
+    ActivityCard,
     Pagination
   },
 }
@@ -28,7 +27,7 @@ export default {
 
 <page-query>
   query Activities ($page: Int) {
-    posts: allActivity(page: $page, perPage: 12) @paginate {
+    posts: allActivity(page: $page, perPage: 50) @paginate {
       totalCount
       pageInfo {
         totalPages
@@ -40,6 +39,7 @@ export default {
           title
           excerpt
           path
+          image (width: 400, height: 400, quality: 90)
         }
       }
     }
