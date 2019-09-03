@@ -48,6 +48,21 @@
     background: url(../../../media/site/header-faux.png) no-repeat;
 }
 
+article {
+    position: relative;
+}
+.card-meta:after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 80px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 90;
+    background: url(../../../media/site/fade-right.png);
+}
+
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));

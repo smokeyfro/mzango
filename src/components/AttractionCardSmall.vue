@@ -1,7 +1,7 @@
 <template>
   <article class="w-full rounded overflow-hidden shadow-lg flex justify-left items-center">
     <figure v-if="post.image">
-      <g-link :to="`${post.path}`" class="h-20 w-full block overflow-hidden">
+      <g-link :to="`${post.path}`" class="h-20 w-20 block overflow-hidden">
       <g-image :src="post.image" class="object-cover h-20 w-20"></g-image>
       </g-link>
     </figure>
