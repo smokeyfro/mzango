@@ -20,7 +20,7 @@
       </div>
       <section>
         <div v-if="layout === 'grid'" class="grid">
-          <place-card class="" v-for="edge in filteredPlaces" :key="edge.node.id" :post="edge.node" />
+          <place-card class="list-item" v-for="edge in filteredPlaces" :key="edge.node.id" :post="edge.node" />
         </div>
         <div v-if="layout === 'list'" class="list flex flex-wrap">
           <place-list class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4" v-for="edge in filteredPlaces" :key="edge.node.id" :post="edge.node" />

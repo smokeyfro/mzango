@@ -2,7 +2,7 @@
   <Layout>
   <div>
       <header>
-        <h1 class="text-4xl sm:text-5xl md:text-6xl font-sans font-bold mb-1">Experience Attractions</h1>
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-sans font-bold mb-1">Places of Interest</h1>
         <p class="text-grey-dark text-lg sm:text-3xl">Not sure what to add to your South African bucket list? See our list of recommended things to experience while you're here.</p>
       </header>
       <div class="toolbar flex justify-between bg-gray-100 p-4 rounded-full mb-10 mt-8">
@@ -20,7 +20,7 @@
       </div>
       <section>
         <div v-if="layout === 'grid'" class="grid">
-          <attraction-card class="" v-for="edge in filteredAttractions" :key="edge.node.id" :post="edge.node" />
+          <attraction-card-small class="" v-for="edge in filteredAttractions" :key="edge.node.id" :post="edge.node" />
         </div>
         <div v-if="layout === 'list'" class="list flex flex-wrap">
           <attraction-list class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4" v-for="edge in filteredAttractions" :key="edge.node.id" :post="edge.node" />
@@ -58,8 +58,9 @@
           id
           title
           excerpt
-          district
-          district_slug
+          image (width: 80, height: 80, quality: 90)
+          place
+          city
           province
           province_slug
           place
@@ -73,7 +74,7 @@
 <script>
 import config from '~/.temp/config.js'
 import AttractionList from '@/components/AttractionList'
-import AttractionCard from '@/components/AttractionCard'
+import AttractionCardSmall from '@/components/AttractionCardSmall'
 import AttractionMap from '@/components/AttractionMap'
 import AttractionTable from '@/components/AttractionTable'
 import AttractionPagination from '@/components/AttractionPagination'
@@ -81,7 +82,7 @@ import AttractionPagination from '@/components/AttractionPagination'
 export default {
   components: {
     AttractionList,
-    AttractionCard,
+    AttractionCardSmall,
     AttractionMap,
     AttractionTable,
     AttractionPagination,

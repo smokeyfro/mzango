@@ -6,7 +6,7 @@
       </g-link>
     </figure>
     <div class="p-3 pl-5 card-meta text-gray-700">
-        <h2 class="font-bold text-lg">
+        <h2 class="font-bold text-lg truncate">
             <g-link :to="`${post.path}`" class="text-black font-bold">{{ post.title }}</g-link>
         </h2>
         <div class="text-sm truncate">
@@ -30,7 +30,7 @@
       },
       placeLink () {
         let prefix = '/explore/'
-        let slug = this.post.place_slug
+        let slug = this.post.city
 
         return `${prefix}${slug}`
       }

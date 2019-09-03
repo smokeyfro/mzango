@@ -1,14 +1,16 @@
 ---
 title: World of Birds
 slug: world-of-birds
-excerpt: Excerpt
-image: "/media/places/item/item-cover.jpg"
-longitude: 
-latitude: 
-website: 
-district: 
-district_slug: 
-province: 
-province_slug: 
-place: 
+excerpt: World of Birds Wildlife Sanctuary and Monkey Park is an avian, reptilian and wildlife sanctuary in Hout Bay, a suburb of Cape Town in South Africa. As suggested by its name, the focus is primarily on birds and monkeys.
+image: "/media/attractions/world-of-birds/world-of-birds-houtbay.jpg"
+longitude: 18.3625
+latitude: -34.0175
+website: http://www.worldofbirds.org.za/
+address: Hout Bay, Cape Town, 7806
+phone: 021 790 2730
+district: Cape Town
+district_slug: cape-town
+province: western-cape
+province_slug: western-cape
+place: Houtbay
 ---

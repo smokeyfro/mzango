@@ -74,6 +74,30 @@ article {
     @apply border-b-2;
 }
 
+.page-enter-active {
+    transition: opacity 0.25s ease-out;
+}
+  
+.page-leave-active {
+    transition: opacity 0.25s ease-in;
+}
+
+.page-enter,
+.page-leave-active {
+    opacity: 0;
+}
+
+
+  .list-item {
+    display: inline-block;
+  }
+  .list-enter-active, .list-leave-active {
+    transition: all .05s;
+  }
+  .list-enter, .list-leave-to /* .list-leave-active below version 2.1.8 */ {
+    opacity: 1;
+    transform: translateY(100px);
+  }
 
 .grid {
     display: grid;
@@ -115,6 +139,5 @@ h1 {
         background: #000;
         color: #fff;
         border-radius: 30px;
-        padding: 5px 15px;
     }
 }

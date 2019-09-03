@@ -6,15 +6,15 @@
                     src="../../media/site/logo-pink.png"
                     :alt="settings.site_name" 
                     class="logo"
-                    width="100"
+                    width="130"
                 />
             </g-link>
             <nav class="mt-4 md:mt-0 hidden md:block">
-            <ul class="flex justify-center">
-                <li class="px-4"><g-link class="nav-places" to="/explore">City Guides</g-link></li>
-                <li class="px-4"><g-link class="nav-hosts" to="/stay">Places to Stay</g-link></li>
-                <li class="px-4"><g-link class="nav-actvities" to="/do">Things to Do</g-link></li>
-                <li class="px-4"><g-link class="nav-actvities" to="/experience">Places of Interest</g-link></li>
+            <ul class="flex justify-center font-semibold text-xl">
+                <li class="px-4"><g-link class="nav-places text-gray-900 inline-block py-1 px-4" to="/explore">City Guides</g-link></li>&nbsp;&middot;&nbsp;
+                <li class="px-4"><g-link class="nav-hosts text-gray-900 inline-block py-1 px-4" to="/stay">Places to Stay</g-link></li>&nbsp;&middot;&nbsp;
+                <li class="px-4"><g-link class="nav-actvities text-gray-900 inline-block py-1 px-4" to="/do">Things to Do</g-link></li>&nbsp;&middot;&nbsp;
+                <li class="px-4"><g-link class="nav-actvities text-gray-900 inline-block py-1 px-4" to="/experience">Places of Interest</g-link></li>
             </ul>
             </nav>
             <div class="social-links">

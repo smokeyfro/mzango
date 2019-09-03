@@ -1,14 +1,14 @@
 ---
 title: Satyagraha House
 slug: satyagraha-house
-excerpt: Excerpt
-image: "/media/places/item/item-cover.jpg"
+excerpt: One hundred years ago, Mohandas Gandhi lived in this house in Johannesburg. Today, the Satyagraha House is both a museum and a guest house. A unique way to immerse yourself in the privacy of a man and the history of a country.
+image: "/media/attractions/satyagraha-house/satyagraha-house-johannesburg.jpg"
 longitude: 
 latitude: 
 website: 
 district: 
 district_slug: 
-province: 
-province_slug: 
-place: 
+province: Gauteng
+province_slug: gauteng
+place: Johannesburg
 ---

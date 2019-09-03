@@ -4,11 +4,13 @@
     <div class="h-full w-full fixed top-0 z-0">
       <g-image src="../../media/site/hero-pink.jpg" class="object-cover h-full" />
     </div>
+    <transition name="list" appear>
     <main class="p-10 relative z-10 bg-white mx-10 shadow-2xl mb-10 rounded-lg">
       <slot/>
       <BottomNav />
       <Footer />
     </main>
+    </transition>
     <modal v-show="modal === true">
       <template slot="header">
         <h2>Greetings fellow earthling!</h2>
