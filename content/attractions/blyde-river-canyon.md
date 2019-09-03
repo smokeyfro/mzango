@@ -10,5 +10,5 @@ district:
 district_slug: 
 province: Mpumalanga
 province_slug: mpumalanga
-place: Blyde River Canyon Nature Reserve
+place: Panorama Route
 ---
