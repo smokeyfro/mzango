@@ -2,7 +2,7 @@
 title: Cape Point
 slug: cape-point
 excerpt: Excerpt
-image: "/media/places/item/item-cover.jpg"
+image: "/media/attractions/cape-point/cape-point-cape-town.jpg"
 longitude: 
 latitude: 
 website: 

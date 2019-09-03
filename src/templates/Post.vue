@@ -5,6 +5,9 @@
 
         <div class="journal-header">
           <h1 v-html="$page.post.title" class="journal-title" />
+          <figure v-if="$page.post.image" class="rounded-lg overflow-hidden mb-10">
+            <g-image :src="$page.post.image"></g-image>
+          </figure>
           <div class="journal-meta">
             <div class="journal-author">
               <span class="label">Author</span>
@@ -35,6 +38,7 @@ query Post ($path: String!) {
     author
     date (format: "D. MMMM YYYY")
     timeToRead
+    image
     content
   }
 }

@@ -1,15 +1,17 @@
 ---
 title: Apartheid Museum
 slug: apartheid-museum
-excerpt: Excerpt
+excerpt: The Apartheid Museum is a museum in Johannesburg, South Africa illustrating apartheid and the 20th century history of South Africa. The museum, part of the Gold Reef City complex, was opened in November 2001.
 image: "/media/places/item/item-cover.jpg"
+address: Northern Park Way and Gold Reef Rd, Johannesburg, 2001
+opening_hours: Monday - Friday, 8am - 5pm
 longitude: 
 latitude: 
-website: 
-district: City of Cape Town
-district_slug: city-of-cape-town
-province: Western Cape
-province_slug: western-cape
-place: Cape Town
-city: cape-town
+website: https://www.apartheidmuseum.org/
+district: City of Johannesburg
+district_slug: city-of-johannesburg
+province: Gauteng
+province_slug: gauteng
+place: Johannesburg
+city: johannesburg
 ---

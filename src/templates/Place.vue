@@ -4,8 +4,11 @@
       <div>
         <div>
           <h1 class="title" v-html="$page.post.title" />
+          <div class="text-gray-800 text-xl mb-5 mr-20" v-html="$page.post.excerpt" />
+          <figure v-if="$page.post.image" class="rounded-lg overflow-hidden mb-10">
+            <g-image :src="$page.post.image"></g-image>
+          </figure>
         </div>
-        <div class="text-gray-800 text-xl mb-5 mr-20" v-html="$page.post.excerpt" />
         <div class="flex flex-wrap">
           <div v-if="$page.post.content" class="w-1/2">
             <div v-html="$page.post.content" class="content markdown mr-10" />
@@ -43,6 +46,7 @@ query Place ($path: String!, $slug: String) {
     id
     path
     slug
+    image (width: 1500, height: 600, quality: 90)
     excerpt
     content
   }
@@ -53,7 +57,7 @@ query Place ($path: String!, $slug: String) {
         title
         excerpt
         path
-        image
+        image (width: 80, height: 80, quality: 90)
         province
         place
         district
@@ -67,7 +71,7 @@ query Place ($path: String!, $slug: String) {
         title
         excerpt
         path
-        image
+        image (width: 80, height: 80, quality: 90)
         province
         province_slug
         place
@@ -81,7 +85,10 @@ query Place ($path: String!, $slug: String) {
         id
         title
         excerpt
+        author
+        date (format: "DD MMMM YYYY")
         tags
+        image (width: 80, height: 80, quality: 90)
         path
       }
     }

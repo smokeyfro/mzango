@@ -2,7 +2,7 @@
 title: Groot Constantia
 slug: groot-constantia
 excerpt: Excerpt
-image: "/media/places/item/item-cover.jpg"
+image: "/media/attractions/groot-constantia/groot-constantia-cape-town.jpg"
 longitude: 
 latitude: 
 website: 

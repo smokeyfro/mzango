@@ -10,7 +10,7 @@
             <g-link :to="`${post.path}`" class="text-black font-bold">{{ post.title }}</g-link>
         </h2>
         <div class="text-sm truncate">
-            <g-link v-if="post.district" :to="districtLink">{{ post.district }}</g-link>
+            <g-link v-if="post.place" :to="placeLink">{{ post.place }}</g-link>
             &middot; 
             <g-link v-if="post.province" :to="provinceLink">{{ post.province }}</g-link>
         </div>
@@ -28,9 +28,9 @@
 
         return `${prefix}${slug}`
       },
-      districtLink () {
-        let prefix = '/districts/'
-        let slug = this.post.district_slug
+      placeLink () {
+        let prefix = '/explore/'
+        let slug = this.post.place_slug
 
         return `${prefix}${slug}`
       }
