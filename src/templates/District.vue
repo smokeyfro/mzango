@@ -1,17 +1,36 @@
 <template>
   <Layout>
-    <div class="district">
-
-      <div class="container">
-
-        <h1 v-html="$page.post.title" />
-        <div v-html="$page.post.excerpt" class="content" />
-        <div v-html="$page.post.content" class="content" />
-        <div class="grid mt-5">
-          <place-card class="" v-for="edge in $page.places.edges" :key="edge.node.id" :post="edge.node" />
+    <div>
+      <h1 class="title" v-html="$page.post.title" />
+      <div v-html="$page.post.excerpt" class="text-gray-800 text-xl mb-5 mr-20" />
+      <figure v-if="$page.post.image" class="rounded-lg overflow-hidden mb-10 w-full">
+        <g-image :src="$page.post.image" class="object-cover w-full"></g-image>
+      </figure>
+      <div class="flex flex-wrap">
+        <div class="w-1/2">
+          <div v-html="$page.post.content" class="markdown mr-20" />
+        </div>
+        <div class="w-1/2">
+          <div v-if="$page.places.edges" class="mt-10">
+            <h2 class="text-3xl font-bold text-black">Towns / Cities</h2>
+            <div class="grid mt-5 mb-10">
+              <place-card-small class="" v-for="edge in $page.places.edges" :key="edge.node.id" :post="edge.node" />
+            </div>
+          </div>
+          <div v-if="$page.hosts.edges" class="mt-10">
+            <h2 class="text-3xl font-bold text-black">Places to stay</h2>
+            <div class="grid-small mt-5">
+              <host-card-small class="" v-for="edge in $page.hosts.edges" :key="edge.node.id" :post="edge.node" />
+            </div>
+          </div>
+          <div v-if="$page.attractions.edges" class="mt-10">
+            <h2 class="text-3xl font-bold text-black">Things to see</h2>
+            <div class="grid-small mt-5">
+              <attraction-card-small class="" v-for="edge in $page.attractions.edges" :key="edge.node.id" :post="edge.node" />
+            </div>
+          </div>
         </div>
       </div>
-
     </div>
   </Layout>
 </template>
@@ -22,8 +41,7 @@ query District ($path: String!, $slug: String!) {
     title
     excerpt
     content
-    image
-    slug
+    image (width: 1500, height: 600, quality: 90)
   }
   places: allPlace(filter: { district_slug: { eq: $slug }}) {
     edges {
@@ -34,6 +52,41 @@ query District ($path: String!, $slug: String!) {
         path
         image
         province
+        province_slug
+        district
+        district_slug
+      }
+    }
+  }
+  hosts: allHost(filter: { district_slug: { eq: $slug }}) {
+    edges {
+      node {
+        id
+        title
+        excerpt
+        path
+        image
+        city
+        place
+        province
+        province_slug
+        district
+        district_slug
+      }
+    }
+  }
+  attractions: allAttraction(filter: { district_slug: { eq: $slug }}) {
+    edges {
+      node {
+        id
+        title
+        excerpt
+        path
+        image
+        city
+        place
+        province
+        province_slug
         district
         district_slug
       }
@@ -43,11 +96,15 @@ query District ($path: String!, $slug: String!) {
 </page-query>
 
 <script>
-import PlaceCard from '@/components/PlaceCard'
+import PlaceCardSmall from '@/components/PlaceCardSmall'
+import HostCardSmall from '@/components/HostCardSmall'
+import AttractionCardSmall from '@/components/AttractionCardSmall'
 
 export default {
   components: {
-    PlaceCard
+    PlaceCardSmall,
+    HostCardSmall,
+    AttractionCardSmall
   },
   metaInfo () {
     return {

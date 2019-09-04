@@ -10,7 +10,8 @@
     <div class="flex flex-wrap mt-10">
       <div class="districts w-1/3">
         <div class="mb-5" v-for="item in $page.districts.edges" :key="item.node.id">
-          <h2 class="text-3xl sm:text-4xl leading-tight">
+          <h2 class="text-3xl sm:text-4xl leading-tight flex items-center">
+            <span v-if="item.node.province_color" :style="`background-color:` + `${item.node.province_color}`" class="w-8 h-8 block rounded-full mr-3"></span>
             <g-link :to="`${item.node.path}`" class="text-black font-bold link">{{ item.node.title }}</g-link>
           </h2>
         </div>
@@ -32,6 +33,7 @@ query Provinces {
         path
         title
         excerpt
+        province_color
       }
     }
   }
@@ -41,7 +43,7 @@ query Provinces {
 <script>
 
 export default {
-
+  
 }
 </script>
 
