@@ -20,10 +20,10 @@
                 <host-card-small class="" v-for="edge in $page.hosts.edges" :key="edge.node.id" :post="edge.node" />
               </div>
             </div>
-            <div v-if="$page.attractions" class="mt-20">
+            <div v-if="$page.attractions.edges" class="mt-20">
               <h2 class="font-sans font-bold text-black my-6 text-2xl sm:text-4xl">Things to Do</h2>
               <div class="grid mt-5">
-                <attraction-card-small class="" v-for="edge in $page.attractions.edges" :key="edge.node.id" :post="edge.node" />
+                <attraction-card-small v-for="edge in $page.attractions.edges" :key="edge.node.id" :post="edge.node" />
               </div>
             </div>
             <div v-if="$page.posts.edges" class="mt-20">
