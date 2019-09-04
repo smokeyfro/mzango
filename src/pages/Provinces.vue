@@ -17,7 +17,7 @@
         </div>
       </div>
       <div class="map w-2/3 -mt-20">
-        <g-image src="../../media/site/south-africa-map.svg"></g-image>
+       <g-image :src="map"></g-image> 
       </div>
     </div>
 
@@ -43,7 +43,11 @@ query Provinces {
 <script>
 
 export default {
-  
+      data() {
+        return {
+            map: require("../../media/site/south-african-provinces-map.svg"),
+        }
+    },
 }
 </script>
 
