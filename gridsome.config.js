@@ -42,7 +42,7 @@ module.exports = {
         path: "content/attractions/**/*.md",
         typeName: "Attraction",
         resolveAbsolutePaths: true,
-        route: '/experience/:slug',
+        route: '/see/:slug',
         remark: {
           externalLinksTarget: "_blank",
           externalLinksRel: ["nofollow", "noopener", "noreferrer"]
