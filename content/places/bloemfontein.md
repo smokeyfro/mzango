@@ -12,6 +12,13 @@ district: Mangaung
 district_slug: mangaung
 province: Free State
 province_slug: free-state
+sources:
+- 1
+    Wikipedia
+    https://en.wikipedia.org/wiki/Bloemfontein
+- 2
+    Wiki Travel
+    https://wikitravel.org/en/Bloemfontein
 ---
 Situated at an altitude of 1,395 m above sea level, the city is home to approximately 520,000 residents and forms part of the Mangaung Metropolitan Municipality which has a population of 747,431. 
 

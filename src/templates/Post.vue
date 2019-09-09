@@ -36,7 +36,7 @@ query Post ($path: String!) {
   post (path: $path) {
     title
     author
-    date (format: "D. MMMM YYYY")
+    date (format: "D MMMM YYYY")
     timeToRead
     image
     content

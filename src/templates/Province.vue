@@ -51,6 +51,7 @@ query Province ($path: String!, $slug: String!) {
         excerpt
         path
         image
+        slug
         province
         province_slug
         district

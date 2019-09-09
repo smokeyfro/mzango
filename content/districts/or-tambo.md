@@ -2,7 +2,7 @@
 title: OR Tambo
 slug: or-tambo
 excerpt: Excerpt
-image: ''
+image: "/media/districts/garden-route/garden-route-western-cape.jpg"
 show_in_nav: true
 ---
 Content
