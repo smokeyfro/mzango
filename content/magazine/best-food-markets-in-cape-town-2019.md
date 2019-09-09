@@ -1,9 +1,9 @@
 ---
-date: 2019-09-09
-title: Best Restuarants in Cape Town - 2019 Edition
+date: 2019-09-03
+title: Best Food Markets in Cape Town
 author: Chris Rault
-image: "/media/mag/best-restuarants-cape-town-2019/best-restuarants-in-cape-town-2019.jpg"
-excerpt: Cape Town is a foodies wet dream, with food markets galore and some of the best dining spots in South Africa.
+image: "/media/mag/food-markets-cape-town/biscuit-mill-cape-town.jpg"
+excerpt: The Food Market scene has exploded over the past couple years and you now have over twenty markets to choose from. Here are our favorites.
 tags: ['cape-town','market','food-market']
 ---
-All about the restaurants
+Post content.
