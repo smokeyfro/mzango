@@ -9,7 +9,6 @@
         <h2 class="text-lg">
             <g-link :to="`${post.path}`" class="text-pink-500">{{ post.title }}</g-link>
         </h2>
-        <div>{{ hosts_count.totalCount }} Hosts </div>
         <div class="text-sm truncate">
             <g-link v-if="post.district" :to="districtLink">{{ post.district }}</g-link>
             &middot; 
