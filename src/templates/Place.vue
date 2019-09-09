@@ -32,14 +32,6 @@
                 <post-card class="" v-for="edge in $page.posts.edges" :key="edge.node.id" :post="edge.node" />
               </div>
             </div>
-            <div v-if="$page.post.sources">
-              <h2>Data Sources</h2>
-              <ul>
-              <li v-for="item in $page.post.sources" :key="item">
-                {{ item }}
-              </li>
-              </ul>
-            </div>
           </div>
         </div>
       </div>
