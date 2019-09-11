@@ -14,24 +14,38 @@
             <div v-html="$page.post.content" class="content markdown mr-10" />
           </div>
           <div class="w-1/2">
-            <div v-if="$page.hosts.edges" class="mt-6">
+            <ClientOnly>
+                <template v-if="$page.post.latitude" class="">
+                  <h2 class="font-sans font-bold text-black mb-8 text-2xl sm:text-4xl">Current Weather</h2>
+                  <vue-weather-widget
+                      api-key="408dbe336740c8c807f4a1c1ecf60e98"
+                      :latitude="$page.post.latitude"
+                      :longitude="$page.post.longitude"
+                      title=""
+                      language="en"
+                      bar-color="#E4104A"
+                      units="uk">
+                  </vue-weather-widget>
+              </template>
+            </ClientOnly>
+            <template v-if="$page.hosts.edges">
               <h2 class="font-sans font-bold text-black mt-6 mb-8 text-2xl sm:text-4xl">Places to Stay</h2>
               <div class="grid mt-5">
                 <host-card-small class="" v-for="edge in $page.hosts.edges" :key="edge.node.id" :post="edge.node" />
               </div>
-            </div>
-            <div v-if="$page.attractions.edges" class="mt-20">
+            </template>
+            <template v-if="$page.attractions.edges" class="mt-20">
               <h2 class="font-sans font-bold text-black my-6 text-2xl sm:text-4xl">Things to Do</h2>
               <div class="grid mt-5">
                 <attraction-card-small v-for="edge in $page.attractions.edges" :key="edge.node.id" :post="edge.node" />
               </div>
-            </div>
-            <div v-if="$page.posts.edges" class="mt-20">
+            </template>
+            <template v-if="$page.posts.edges" class="mt-20">
               <h2 class="font-sans font-bold text-black my-6 text-2xl sm:text-4xl">Related Articles</h2>
               <div class="grid mt-5">
                 <post-card class="" v-for="edge in $page.posts.edges" :key="edge.node.id" :post="edge.node" />
               </div>
-            </div>
+            </template>
           </div>
         </div>
       </div>
@@ -48,6 +62,8 @@ query Place ($path: String!, $slug: String) {
     slug
     image (width: 1500, height: 600, quality: 90)
     excerpt
+    latitude
+    longitude
     content
     sources
   }
@@ -102,12 +118,17 @@ query Place ($path: String!, $slug: String) {
 import HostCardSmall from '@/components/HostCardSmall'
 import AttractionCardSmall from '@/components/AttractionCardSmall'
 import PostCard from '@/components/PostCard'
+import DefaultLayout from '~/layouts/Default.vue'
+import VueYouTubeEmbed from 'vue-youtube-embed'
+import VueStorage from 'vuestorage'
+import 'vue-weather-widget/dist/css/vue-weather-widget.css';
 
 export default {
   components: {
     HostCardSmall,
     AttractionCardSmall,
-    PostCard
+    PostCard,
+    VueWeatherWidget: () => import('vue-weather-widget')
   },
   metaInfo () {
     return {

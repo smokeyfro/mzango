@@ -75,6 +75,10 @@ article {
     @apply border-b-2;
 }
 
+#forecast_embed {
+    min-width: 100%;
+}
+
 .page-enter-active {
     transition: opacity 0.25s ease-out;
 }

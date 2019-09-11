@@ -1,6 +1,7 @@
 import DefaultLayout from '~/layouts/Default.vue'
 import VueYouTubeEmbed from 'vue-youtube-embed'
 import VueStorage from 'vuestorage'
+import Autocomplete from 'v-autocomplete'
 
 // import VueWeatherWidget from 'vue-weather-widget';
 // import 'vue-weather-widget/dist/css/vue-weather-widget.css';
@@ -9,6 +10,7 @@ export default function (Vue, { head }) {
   Vue.component('Layout', DefaultLayout)
   Vue.use(VueYouTubeEmbed)
   Vue.use(VueStorage)
+  // Vue.use(Autocomplete)
 
   // Vue.use(VueWeatherWidget)
   head.htmlAttrs = { lang: 'en', class: 'h-full' }

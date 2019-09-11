@@ -1,13 +1,17 @@
-<template>
+
+Planning a trip to South Africa?
+Plan ahead with detailed city guide<template>
   <div class="relative">
     <Header class="fixed top-0 w-full z-30" />
     <div class="h-screen w-full overflow-hidden fixed top-0">
+      <!-- <g-image :src="`/assets/static/media/site/${selectedImage}`" class="object-cover object-bottom h-full" /> -->
       <g-image src="../../media/site/hero-pink.jpg" class="object-cover object-bottom h-full" />
     </div>
     <div class="h-screen flex items-center justify-center content-center">
       <div class="w-1/3 mx-auto text-center -mt-8">
         <Hero class="w-full mb-6" />
         <BasicSearch class="w-full" />
+        <v-autocomplete :items="items" v-model="item" :get-label="getLabel" :component-item='template' @update-items="updateItems"></v-autocomplete>
       </div>
     </div>
     <main class="p-10 relative z-30 bg-white mx-10 shadow-2xl mb-10 rounded-lg">
@@ -64,6 +68,18 @@ query Posts {
       }
     }
   },
+  allHosts: allHost(limit: 1000) {
+    edges {
+      node {
+        id
+        title
+        image(width: 80, height: 60, quality: 90)
+        path
+        place
+        province
+      }
+    }
+  },
   magazine: allPost (limit: 4) {
     edges {
       node {
@@ -84,6 +100,8 @@ import FeaturedHosts from "@/components/FeaturedHosts"
 import BottomNav from "@/components/BottomNav"
 import Footer from "@/components/Footer"
 import Modal from "@/components/Modal"
+import ItemTemplate from '@/components/ItemTemplate.vue'
+// import 'v-autocomplete/dist/v-autocomplete.css'
 
 export default {
   components: {
@@ -93,7 +111,8 @@ export default {
     FeaturedHosts,
     BottomNav,
     Footer,
-    Modal
+    Modal,
+    ItemTemplate
   },
   stored: {
     modal: {
@@ -101,6 +120,46 @@ export default {
       key: 'modal',
       default: true
     }
-  }
+  },
+  data () {
+    return {
+      template: ItemTemplate,
+      items: [],
+      item: {id: 1, name: 'Fairy Knowe Backpackers'},
+      images: [
+        'header-1.jpg',
+        'header-2.jpg',
+        'header-3.jpg',
+        'header-4.jpg'
+      ],
+      selectedImage: ''
+    }
+  },
+  // computed: {
+
+  // },
+  // mounted(){
+  //     if( this.hostsList ){
+  //         Object.assign( this.items, this.hostsList )
+  //     } 
+  // },
+  methods: {
+    // getLabel (item) {
+    //   return items.node.title
+    // },
+    // updateItems (text) {
+    //   yourGetItemsMethod(text).then( (response) => {
+    //     this.items = response
+    //   })
+    // },
+    randomItem (items) {
+      return items[Math.floor(Math.random()*items.length)];
+    }
+  },
+  // created() {
+  //   var hostsList = this.$page.allHosts;
+  //   this.$set('items', hostsList)
+  //   this.selectedImage = this.randomItem(this.images)
+  // }
 }
 </script>
