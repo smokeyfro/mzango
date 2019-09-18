@@ -1,6 +1,4 @@
-
-Planning a trip to South Africa?
-Plan ahead with detailed city guide<template>
+<template>
   <div class="relative">
     <Header class="fixed top-0 w-full z-30" />
     <div class="h-screen w-full overflow-hidden fixed top-0">
@@ -11,7 +9,6 @@ Plan ahead with detailed city guide<template>
       <div class="w-1/3 mx-auto text-center -mt-8">
         <Hero class="w-full mb-6" />
         <BasicSearch class="w-full" />
-        <v-autocomplete :items="items" v-model="item" :get-label="getLabel" :component-item='template' @update-items="updateItems"></v-autocomplete>
       </div>
     </div>
     <main class="p-10 relative z-30 bg-white mx-10 shadow-2xl mb-10 rounded-lg">
@@ -68,19 +65,7 @@ query Posts {
       }
     }
   },
-  allHosts: allHost(limit: 1000) {
-    edges {
-      node {
-        id
-        title
-        image(width: 80, height: 60, quality: 90)
-        path
-        place
-        province
-      }
-    }
-  },
-  magazine: allPost (limit: 4) {
+  blog: allPost (limit: 4) {
     edges {
       node {
         id
