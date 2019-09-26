@@ -10,7 +10,6 @@
         <Hero class="w-full mb-6" />
         <Dropdown
             :options="$page.places.edges.map(e => e.node)"
-            v-on:selected="submit"
             :disabled="false"
             name="dropdown"
             :maxItem="600"
@@ -143,7 +142,7 @@ export default {
     randomItem (items) {
       return items[Math.floor(Math.random()*items.length)];
     },
-    submit(){
+    submit (selected){
       this.$router.push(this.matches[selected.path])
     }
   }
