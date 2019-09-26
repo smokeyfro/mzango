@@ -1,5 +1,6 @@
 ---
 title: Mdumbi
+name: Mdumbi
 slug: mdumbi
 excerpt: 
 image: "/media/places/mdumbi/mdumbi-cover.jpg"

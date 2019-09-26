@@ -1,6 +1,7 @@
 ---
 title: Cape Town
 slug: cape-town
+name: Cape Town
 excerpt: Cape Town is the second largest city in South Africa and is the capital of the Western Cape Province, as well as being the legislative capital of South Africa (the Houses of Parliament are here). It is located in the south-west corner of the country near the Cape of Good Hope, and is the most southern city in Africa. It is a stone's throw from South Africa's world-famous Cape Winelands around Stellenbosch, Paarl and Franschhoek.
 image: "/media/places/cape-town/cape-town-cover.jpg"
 longitude: "18.423889"

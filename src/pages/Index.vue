@@ -8,25 +8,16 @@
     <div class="h-screen flex items-center justify-center content-center">
       <div class="w-1/3 mx-auto text-center -mt-8">
         <Hero class="w-full mb-6" />
-         <div v-if="selected" style="padding-top:10px; width: 100%;">
-          You have selected <code>{{selected.title}}, the {{selected.path}}</code>
-        </div>
-        <div class="autosuggest-container relative z-50 ">
-          <vue-autosuggest
-            v-model="query"
-            :suggestions="filteredOptions"
-            @focus="focusMe"
-            @click="clickHandler"
-            @input="onInputChange"
-            @selected="onSelected"
-            :get-suggestion-value="getSuggestionValue"
-            :input-props="{id:'autosuggest__input', placeholder:'Type in the name of a South African town or city',class:'bg-white shadow-2xl focus:outline-none focus:shadow-outline rounded-full py-4 px-8 text-lg block w-full appearance-none leading-normal text-black placeholder:text-gray-300'}">
-            <div slot-scope="{suggestion}" style="display: flex; align-items: center;">
-              <img :style="{ display: 'flex', width: '25px', height: '25px', borderRadius: '15px', marginRight: '10px'}" :src="suggestion.item.avatar" />
-              <div style="{ display: 'flex', color: 'navyblue'}">{{suggestion.item.title}}</div>
-            </div>
-          </vue-autosuggest>
-        </div>
+        <Dropdown
+            :options="$page.places.edges.map(e => e.node)"
+            v-on:selected="goToItem"
+            v-on:filter="getDropdownValues"
+            :disabled="false"
+            name="zipcode"
+            :maxItem="1000"
+            placeholder="Please select an option">
+        </Dropdown>
+        <!-- <autocomplete :suggestions="$page.places.edges.map(e => e.node)" value="" :selection.sync="value"></autocomplete> -->
       </div>
     </div>
     <main class="p-10 relative z-30 bg-white mx-10 shadow-2xl mb-10 rounded-lg">
@@ -83,12 +74,13 @@ query Posts {
       }
     }
   },
-  places: allPlace {
+  places: allPlace ( sortBy: "title", order: ASC) {
     edges {
       node {
         id
         path
         title
+        name
       }
     }
   },
@@ -113,7 +105,8 @@ import BottomNav from "@/components/BottomNav"
 import Footer from "@/components/Footer"
 import Modal from "@/components/Modal"
 import ItemTemplate from '@/components/ItemTemplate.vue'
-import { VueAutosuggest } from "vue-autosuggest";
+import Dropdown from 'vue-simple-search-dropdown';
+// import Autocomplete from '@/components/Autocomplete.vue'
 
 export default {
   components: {
@@ -125,7 +118,7 @@ export default {
     Footer,
     Modal,
     ItemTemplate,
-    VueAutosuggest
+    Dropdown
   },
   stored: {
     modal: {
@@ -142,78 +135,21 @@ export default {
         'header-3.jpg',
         'header-4.jpg'
       ],
-      selectedImage: '',
-      query: "",
-      selected: "",
-      filter: []
-    }
-  },
-  computed: {
-    suggestions() {
-      return this.$page.places.edges
-		},
-    filteredOptions() {
-      return [
-        {
-          data: this.suggestions.node.filter(option => {
-            return option.title.toLowerCase().indexOf(this.query.toLowerCase()) > -1;
-          })
-        }
-      ];
+      selectedImage: ''
     }
   },
   methods: {
     randomItem (items) {
       return items[Math.floor(Math.random()*items.length)];
     },
-       clickHandler(item) {
-      // event fired when clicking on the input
-    },
-    onSelected(item) {
-      this.selected = item.item;
-    },
-    onInputChange(text) {
-      // event fired when the input changes
-      console.log(text)
-    },
-    /**
-     * This is what the <input/> value is set to when you are selecting a suggestion.
-     */
-    getSuggestionValue(suggestion) {
-      return suggestion.item.title;
-    },
-    focusMe(e) {
-      console.log(e) // FocusEvent
+    goToItem() {
+      this.$emit('input', this.matches[selected].path)
+      this.open = false
     }
   }
 }
 </script>
 
 <style>
-.autosuggest-container {
-  display: flex;
-  justify-content: center;
-}
-.autosuggest-container ul {
-  width: 100%;
-  color: rgba(30, 39, 46,1.0);
-  list-style: none;
-  margin: 0;
-  padding: 0.5rem 0 .5rem 0;
-}
-.autosuggest-container li {
-  margin: 0 0 0 0;
-  border-radius: 5px;
-  padding: 0.75rem 0 0.75rem 0.75rem;
-  display: flex;
-  align-items: center;
-}
-.autosuggest-container li:hover {
-  cursor: pointer;
-}
 
-#autosuggest { width: 100%; display: block;}
-.autosuggest__results-item--highlighted {
-  background-color: rgba(51, 217, 178,0.2);
-}
 </style>

@@ -1,5 +1,6 @@
 ---
 title: Kimberley
+name: Kimberley
 slug: kimberley
 excerpt: 
 image: "/media/places/kimberley/kimberley-cover.jpg"

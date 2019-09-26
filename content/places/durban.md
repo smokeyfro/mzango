@@ -1,5 +1,6 @@
 ---
 title: Durban
+name: Durban
 slug: durban
 excerpt: 
 image: "/media/places/durban/durban-cover.jpg"

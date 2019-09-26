@@ -1,5 +1,6 @@
 ---
 title: Stellenbosch
+name: Stellenbosch
 slug: stellenbosch
 excerpt: 
 image: "/media/places/stellenbosch/stellenbosch-cover.jpg"

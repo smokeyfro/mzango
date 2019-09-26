@@ -1,5 +1,6 @@
 ---
 title: Oudstoorn
+name: Oudstoorn
 slug: oudstoorn
 excerpt: 
 image: "/media/places/wilderness/wilderness-cover.jpg"

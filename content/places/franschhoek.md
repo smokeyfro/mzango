@@ -1,5 +1,6 @@
 ---
 title: Franschhoek
+name: Franschhoek
 slug: franschhoek
 excerpt: 
 image: "/media/places/franschhoek/franschhoek-cover.jpg"

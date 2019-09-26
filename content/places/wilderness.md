@@ -1,5 +1,6 @@
 ---
 title: Wilderness
+name: Wilderness
 slug: wilderness
 excerpt: Wilderness is a seaside town on the Garden Route of the southern Cape in South Africa.
 image: "/media/places/wilderness/wilderness-cover.jpg"

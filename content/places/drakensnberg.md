@@ -1,5 +1,6 @@
 ---
 title: Drakensberg
+name: Drakensberg
 slug: drakensberg
 excerpt: 
 image: "/media/places/drakensberg/drakensberg-cover.jpg"

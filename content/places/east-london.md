@@ -1,5 +1,6 @@
 ---
 title: East London
+name: East London
 slug: east-london
 excerpt: 
 image: "/media/places/east-london/east-london-cover.jpg"

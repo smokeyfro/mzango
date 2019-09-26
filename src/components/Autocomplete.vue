@@ -1,5 +1,5 @@
 <template>
-    <div style="position:relative" v-bind:class="{'open':openSuggestion}">
+    <div class="relative z-50" v-bind:class="{'open':openSuggestion}">
         <input class="form-control" type="text" :value="value" @input="updateValue($event.target.value)"
           @keydown.enter = 'enter'
           @keydown.down = 'down'
@@ -58,7 +58,7 @@ export default {
     },
     // When enter pressed on the input
     enter () {
-      this.$emit('input', this.matches[this.current].path)
+      this.$emit('input', this.matches[this.current].title)
       this.open = false
     },
     // When up pressed while suggestions are open

@@ -1,5 +1,6 @@
 ---
 title: Storms River
+name: Storms River
 slug: storms-river
 excerpt: 
 image: "/media/places/storms-river/storms-river-cover.jpg"

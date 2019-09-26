@@ -1,5 +1,6 @@
 ---
 title: Plettenberg Bay
+name: Plettenberg Bay
 slug: plettenberg-bay
 excerpt: 
 image: "/media/places/plettenberg-bay/plettenberg-bay-cover.jpg"

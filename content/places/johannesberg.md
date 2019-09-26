@@ -1,5 +1,6 @@
 ---
 title: Johannesburg
+name: Johannesburg
 slug: johannesburg
 excerpt: 
 image: "/media/places/johannesburg/johannesburg-cover.jpg"

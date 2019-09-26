@@ -1,5 +1,6 @@
 ---
 title: George
+name: George
 slug: george
 excerpt: 
 image: "/media/places/george/george-cover.jpg"

@@ -1,5 +1,6 @@
 ---
 title: Pretoria
+name: Pretoria
 slug: pretoria
 excerpt: 
 image: "/media/places/pretoria/pretoria-cover.jpg"
