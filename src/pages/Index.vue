@@ -10,14 +10,14 @@
         <Hero class="w-full mb-6" />
         <Dropdown
             :options="$page.places.edges.map(e => e.node)"
-            v-on:selected="goToItem"
-            v-on:filter="getDropdownValues"
+            v-on:selected="submit"
             :disabled="false"
-            name="zipcode"
-            :maxItem="6"
+            name="dropdown"
+            :maxItem="600"
             class="text-left"
             placeholder="Please select an option">
         </Dropdown>
+        <button type="submit" v-on:click.prevent="submit()" class="relative z-50">Go</button>
         <!-- <autocomplete :suggestions="$page.places.edges.map(e => e.node)" value="" :selection.sync="value"></autocomplete> -->
       </div>
     </div>
@@ -143,9 +143,8 @@ export default {
     randomItem (items) {
       return items[Math.floor(Math.random()*items.length)];
     },
-    goToItem() {
-      this.$emit('input', this.matches[selected].path)
-      this.open = false
+    submit(){
+      this.$router.push(this.matches[selected.path])
     }
   }
 }
