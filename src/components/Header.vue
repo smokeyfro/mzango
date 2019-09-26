@@ -18,7 +18,7 @@
             </ul>
             </nav>
             <div class="social-links">
-                <g-link class="btn bg-transparent hover:bg-black hover:text-white text-black border border-black hover:border-transparent font-bold rounded-full px-5 py-2" to="/magazine">Magazine</g-link>
+                <g-link class="btn bg-transparent hover:bg-black hover:text-white text-black border border-black hover:border-transparent font-bold rounded-full px-5 py-2" to="/blog">Blog</g-link>
                 <!-- <div class="layout-toggle flex">
                     <h1
                     v-text="`Current theme: ${ themeName }`"

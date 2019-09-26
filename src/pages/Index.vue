@@ -1,6 +1,4 @@
-
-Planning a trip to South Africa?
-Plan ahead with detailed city guide<template>
+<template>
   <div class="relative">
     <Header class="fixed top-0 w-full z-30" />
     <div class="h-screen w-full overflow-hidden fixed top-0">
@@ -10,8 +8,25 @@ Plan ahead with detailed city guide<template>
     <div class="h-screen flex items-center justify-center content-center">
       <div class="w-1/3 mx-auto text-center -mt-8">
         <Hero class="w-full mb-6" />
-        <BasicSearch class="w-full" />
-        <v-autocomplete :items="items" v-model="item" :get-label="getLabel" :component-item='template' @update-items="updateItems"></v-autocomplete>
+         <div v-if="selected" style="padding-top:10px; width: 100%;">
+          You have selected <code>{{selected.title}}, the {{selected.path}}</code>
+        </div>
+        <div class="autosuggest-container relative z-50 ">
+          <vue-autosuggest
+            v-model="query"
+            :suggestions="filteredOptions"
+            @focus="focusMe"
+            @click="clickHandler"
+            @input="onInputChange"
+            @selected="onSelected"
+            :get-suggestion-value="getSuggestionValue"
+            :input-props="{id:'autosuggest__input', placeholder:'Type in the name of a South African town or city',class:'bg-white shadow-2xl focus:outline-none focus:shadow-outline rounded-full py-4 px-8 text-lg block w-full appearance-none leading-normal text-black placeholder:text-gray-300'}">
+            <div slot-scope="{suggestion}" style="display: flex; align-items: center;">
+              <img :style="{ display: 'flex', width: '25px', height: '25px', borderRadius: '15px', marginRight: '10px'}" :src="suggestion.item.avatar" />
+              <div style="{ display: 'flex', color: 'navyblue'}">{{suggestion.item.title}}</div>
+            </div>
+          </vue-autosuggest>
+        </div>
       </div>
     </div>
     <main class="p-10 relative z-30 bg-white mx-10 shadow-2xl mb-10 rounded-lg">
@@ -68,19 +83,16 @@ query Posts {
       }
     }
   },
-  allHosts: allHost(limit: 1000) {
+  places: allPlace {
     edges {
       node {
         id
-        title
-        image(width: 80, height: 60, quality: 90)
         path
-        place
-        province
+        title
       }
     }
   },
-  magazine: allPost (limit: 4) {
+  blog: allPost (limit: 4) {
     edges {
       node {
         id
@@ -101,7 +113,7 @@ import BottomNav from "@/components/BottomNav"
 import Footer from "@/components/Footer"
 import Modal from "@/components/Modal"
 import ItemTemplate from '@/components/ItemTemplate.vue'
-// import 'v-autocomplete/dist/v-autocomplete.css'
+import { VueAutosuggest } from "vue-autosuggest";
 
 export default {
   components: {
@@ -112,7 +124,8 @@ export default {
     BottomNav,
     Footer,
     Modal,
-    ItemTemplate
+    ItemTemplate,
+    VueAutosuggest
   },
   stored: {
     modal: {
@@ -123,43 +136,84 @@ export default {
   },
   data () {
     return {
-      template: ItemTemplate,
-      items: [],
-      item: {id: 1, name: 'Fairy Knowe Backpackers'},
       images: [
         'header-1.jpg',
         'header-2.jpg',
         'header-3.jpg',
         'header-4.jpg'
       ],
-      selectedImage: ''
+      selectedImage: '',
+      query: "",
+      selected: "",
+      filter: []
     }
   },
-  // computed: {
-
-  // },
-  // mounted(){
-  //     if( this.hostsList ){
-  //         Object.assign( this.items, this.hostsList )
-  //     } 
-  // },
+  computed: {
+    suggestions() {
+      return this.$page.places.edges
+		},
+    filteredOptions() {
+      return [
+        { 
+          data: this.suggestions.node.filter(option => {
+            return option.title.toLowerCase().indexOf(this.query.toLowerCase()) > -1;
+          })
+        }
+      ];
+    }
+  },
   methods: {
-    // getLabel (item) {
-    //   return items.node.title
-    // },
-    // updateItems (text) {
-    //   yourGetItemsMethod(text).then( (response) => {
-    //     this.items = response
-    //   })
-    // },
     randomItem (items) {
       return items[Math.floor(Math.random()*items.length)];
+    },
+       clickHandler(item) {
+      // event fired when clicking on the input
+    },
+    onSelected(item) {
+      this.selected = item.item;
+    },
+    onInputChange(text) {
+      // event fired when the input changes
+      console.log(text)
+    },
+    /**
+     * This is what the <input/> value is set to when you are selecting a suggestion.
+     */
+    getSuggestionValue(suggestion) {
+      return suggestion.item.title;
+    },
+    focusMe(e) {
+      console.log(e) // FocusEvent
     }
-  },
-  // created() {
-  //   var hostsList = this.$page.allHosts;
-  //   this.$set('items', hostsList)
-  //   this.selectedImage = this.randomItem(this.images)
-  // }
+  }
 }
 </script>
+
+<style>
+.autosuggest-container {
+  display: flex;
+  justify-content: center;
+}
+.autosuggest-container ul {
+  width: 100%;
+  color: rgba(30, 39, 46,1.0);
+  list-style: none;
+  margin: 0;
+  padding: 0.5rem 0 .5rem 0;
+}
+.autosuggest-container li {
+  margin: 0 0 0 0;
+  border-radius: 5px;
+  padding: 0.75rem 0 0.75rem 0.75rem;
+  display: flex;
+  align-items: center;
+}
+.autosuggest-container li:hover {
+  cursor: pointer;
+}
+
+#autosuggest { width: 100%; display: block;}
+.autosuggest__results-item--highlighted {
+  background-color: rgba(51, 217, 178,0.2);
+}
+</style>
