@@ -57,7 +57,7 @@
         <h2>Greetings fellow earthling!</h2>
       </template>
       <template slot="body">
-        <p class="text-xl">This is the early preview of Mzango, <em>the unofficial guide to backpacking in South Africa</em>.</p> 
+        <p class="text-xl">This is the early preview of Mzango, <em>the unofficial guide to backpacking in South Africa</em>.</p>
         <p class="my-4">The site is still in active development and a lot will change before the official launch. <a href="#" v-on:click="modal = false" class="font-bold bg-yellow-200">Subscribe</a> to be notified when we launch.</p>
       </template>
       <template slot="footer">
@@ -154,7 +154,7 @@ export default {
 		},
     filteredOptions() {
       return [
-        { 
+        {
           data: this.suggestions.node.filter(option => {
             return option.title.toLowerCase().indexOf(this.query.toLowerCase()) > -1;
           })
