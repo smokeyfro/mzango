@@ -14,7 +14,8 @@
             v-on:filter="getDropdownValues"
             :disabled="false"
             name="zipcode"
-            :maxItem="1000"
+            :maxItem="6"
+            class="text-left"
             placeholder="Please select an option">
         </Dropdown>
         <!-- <autocomplete :suggestions="$page.places.edges.map(e => e.node)" value="" :selection.sync="value"></autocomplete> -->

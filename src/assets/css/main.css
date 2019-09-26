@@ -136,6 +136,41 @@ h1 {
 path:hover {
     opacity: 0.9;
 }
+
+.dropdown input.dropdown-input[data-v-6149e08a] {
+    @apply bg-white;
+    @apply shadow-2xl;
+    @apply rounded-full;
+    @apply py-4;
+    @apply px-8;
+    @apply text-lg;
+    @apply block;
+    @apply w-full;
+    @apply appearance-none;
+    @apply leading-normal;
+    @apply text-black;
+}
+.dropdown input.dropdown-input[data-v-6149e08a] {
+    max-width: 100%;
+}
+.dropdown div.dropdown-content[data-v-6149e08a] {
+    position: absolute;
+    background-color: #fff;
+    min-width: 100%;
+    max-width: 100%;
+    max-height: 248px;
+    border: 1px solid #e7ecf5;
+    box-shadow: 0px -8px 34px 0px rgba(0, 0, 0, 0.05);
+    overflow: auto;
+    z-index: 1;
+}
+/* .dropdown .dropdown-input:placeholder {
+    @apply text-gray-300;
+} */
+.dropdown input.dropdown-input[data-v-6149e08a]:focus {
+    @apply shadow-outline;
+    @apply outline-none;
+}
 @media (min-width: 768px) {
     .header li .active {
         background: #000;
