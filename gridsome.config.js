@@ -58,6 +58,9 @@ module.exports = {
         component: './src/templates/Activity.vue'
       }
     ],
+    // Post: node => { 
+    //   return `/journal/${node.topic_slug}/${node.slug}`;
+    // },
     Post: [
       {
         path: '/blog/:title',
