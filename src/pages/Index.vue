@@ -143,7 +143,7 @@ export default {
       return items[Math.floor(Math.random()*items.length)];
     },
     submit (selected){
-      this.$router.push(this.matches[selected.path])
+      this.$router.push(this.matches[selected])
     }
   }
 }
