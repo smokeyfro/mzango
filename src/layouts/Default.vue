@@ -33,14 +33,14 @@ import config from '~/.temp/config.js'
 import Header from '~/components/Header.vue'
 import BottomNav from '@/components/BottomNav'
 import Footer from '@/components/Footer'
-import Modal from '@/components/Modal'
+// import Modal from '@/components/Modal'
 
 export default {
   components: {
     Header,
     BottomNav,
     Footer,
-    Modal
+    // Modal
   },
   computed: {
     config () {

@@ -43,7 +43,7 @@
       <BottomNav />
       <Footer />
     </main>
-    <modal v-show="modal === true">
+    <!-- <modal v-show="modal === true">
       <template slot="header">
         <h2>Greetings fellow earthling!</h2>
       </template>
@@ -56,7 +56,7 @@
           <button v-on:click="modal = false" aria-label="Close modal" type="button" name="button" class="bg-black text-white py-2 px-4 rounded-full">Roger that!</button>
         </div>
       </template>
-    </modal>
+    </modal> -->
   </div>
 </template>
 
@@ -142,9 +142,9 @@ export default {
     randomItem (items) {
       return items[Math.floor(Math.random()*items.length)];
     },
-    submit (selected){
-      this.$router.push(this.matches[selected])
-    }
+    // submit (selected){
+    //   this.$router.push(this.matches[selected])
+    // }
   }
 }
 </script>
