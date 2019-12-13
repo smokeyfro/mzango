@@ -15,7 +15,7 @@ telephone: 044 877 0700
 mobile: 082 838 5944
 email: info@wildfarm.co.za
 website: http://www.wildfarm.co.za/
-image: '/media/hosts/wild-farm/wild-farm-backpackers-wilderness.jpg'
+image: "https://mzango.com/media//hosts/wild-farm/wild-farm-backpackers-wilderness.jpg'
 gallery: []
 volunteer_platform: None
 accepting_volunteers: false

@@ -15,7 +15,7 @@ telephone: ''
 mobile: ''
 email: email@domain.com
 website: ''
-image: '/media/hosts/terra-khaya/terra-khaya-backpackers-hogsback.jpg'
+image: "https://mzango.com/media//hosts/terra-khaya/terra-khaya-backpackers-hogsback.jpg'
 gallery: []
 volunteer_platform: None
 accepting_volunteers: false

@@ -15,7 +15,7 @@ telephone: ''
 mobile: ''
 email: email@domain.com
 website: ''
-image: '/media/hosts/wild-spirit/wild-spirit-backpackers-natures-valley.jpg'
+image: "https://mzango.com/media//hosts/wild-spirit/wild-spirit-backpackers-natures-valley.jpg'
 gallery: []
 volunteer_platform: WorkAway
 accepting_volunteers: true
