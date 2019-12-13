@@ -227,12 +227,12 @@ module.exports = {
         }
       }
     },
-    {
-      use: '@gridsome/plugin-google-analytics',
-      options: {
-        id: process.env.MZ_GA
-      }
-    },
+    // {
+    //   use: '@gridsome/plugin-google-analytics',
+    //   options: {
+    //     id: process.env.MZ_GA
+    //   }
+    // },
     {
       use: '@gridsome/plugin-sitemap',
       options: {

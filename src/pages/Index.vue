@@ -18,10 +18,10 @@
                 v-focus
                 placeholder="Type in a phrase or search term...">
             <div class="text-left results">
-                <div v-for="(item, $index) in searchResults" :key="item.id" class="mx-5">
+                <div v-for="item in searchResults" :key="item.id" class="mx-5">
                     <g-link :to="item.path" class="block w-full p-4 item">
                         <figure :v-if="item.image">
-                          <g-image :src="item.image" />
+                          <g-image :src="`${item.image}`" />
                         </figure>
                         <h2>
                             {{ item.title }} <span :class="item.index | lowerCase" class="badge">{{ item.index }}</span>
@@ -169,6 +169,7 @@ export default {
     // }
   },
   computed: {
+    urlPrefix: 'https://mzango.com',
     searchResults () {
       const searchTerm = this.searchTerm
       if (searchTerm.length < 3) return []

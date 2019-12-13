@@ -3,7 +3,7 @@ title: Bloemfontein
 name: Bloemfontein
 slug: bloemfontein
 excerpt: Bloemfontein is the capital city of the province of Free State of South Africa; and, as the judicial capital of the nation, one of South Africa's three national capitals and is the seventh largest city in South Africa. 
-image: "/media/places/bloemfontein/bloemfontein-cover.jpg"
+image: "https://mzango.com/media/places/bloemfontein/bloemfontein-cover.jpg"
 longitude: 26.216667
 latitude: -29.116667
 website: http://mangaung.co.za/
