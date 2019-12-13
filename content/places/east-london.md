@@ -1,8 +1,9 @@
 ---
 title: East London
+name: East London
 slug: east-london
 excerpt: 
-image: "/media/places/east-london/east-london-cover.jpg"
+image: "https://mzango.com/media/places/east-london/east-london-cover.jpg"
 longitude: 
 latitude: 
 website: 

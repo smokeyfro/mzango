@@ -15,7 +15,7 @@ telephone: '+270214230615'
 mobile: 
 email: info@longstreetbackpackers.co.za
 website: https://www.longstreetbackpackers.co.za
-image: "/media/hosts/long-street-backpackers/long-street-backpackers-cape-town.jpg"
+image: "https://mzango.com/media/hosts/long-street-backpackers/long-street-backpackers-cape-town.jpg"
 gallery: []
 volunteer_platform: WorkAway
 accepting_volunteers: true

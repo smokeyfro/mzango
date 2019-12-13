@@ -2,7 +2,7 @@
 title: Union Buildings
 slug: union-buildings
 excerpt: The Union Buildings form the official seat of the South African Government and also house the offices of the President of South Africa. The imposing buildings are located in Pretoria, atop Meintjieskop at the northern end of Arcadia, close to historic Church Square and the Voortrekker Monument.
-image: "/media/attractions/union-buildings/union-buildings-pretoria.jpg"
+image: "https://mzango.com/media/attractions/union-buildings/union-buildings-pretoria.jpg"
 longitude: 28.212022
 latitude: -25.740467
 website: https://www.gauteng.net/attractions/union_buildings

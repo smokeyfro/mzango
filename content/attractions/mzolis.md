@@ -2,7 +2,7 @@
 title: Mzolis
 slug: mzolis
 excerpt: Mzoli's (also known as Mzoli's Place, Mzoli's Meat, or Mzoli's Butchery) is a butchery in Gugulethu, a township on the outskirts of Cape Town, South Africa. Since Mzoli's opened in early 2003, the restaurant has become a popular gathering spot for Cape Town residents and a tourist attraction. Amongst Gugulethu's residents, Mzoli's Place has a reputation for public drunkenness and disrespect for the local community. Mzoli's is named after the founder and owner, Mzoli Ngcawuzele
-image: "/media/attractions/mzolis/mzolis-cape-town.jpg"
+image: "https://mzango.com/media/attractions/mzolis/mzolis-cape-town.jpg"
 longitude: 18.569722
 latitude: -33.976389
 website: 

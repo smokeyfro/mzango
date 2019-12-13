@@ -2,7 +2,7 @@
 title: Robben Island
 slug: robben-island
 excerpt: Excerpt
-image: "/media/attractions/robben-island/robben-island-cape-town.jpg"
+image: "https://mzango.com/media/attractions/robben-island/robben-island-cape-town.jpg"
 longitude: 
 latitude: 
 website: 

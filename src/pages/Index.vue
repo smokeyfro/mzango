@@ -1,49 +1,53 @@
 <template>
   <div class="relative">
-    <Header class="fixed top-0 w-full z-30" />
-    <div class="h-screen w-full overflow-hidden fixed top-0">
+    <Header class="fixed top-0 z-30 w-full" />
+    <div class="fixed top-0 w-full h-screen overflow-hidden">
       <!-- <g-image :src="`/assets/static/media/site/${selectedImage}`" class="object-cover object-bottom h-full" /> -->
       <g-image src="../../media/site/hero-pink.jpg" class="object-cover object-bottom h-full" />
     </div>
-    <div class="h-screen flex items-center justify-center content-center">
-      <div class="w-1/3 mx-auto text-center -mt-8">
+    <div class="flex items-center content-center justify-center h-screen hero-wrap">
+      <div class="w-2/3 mx-auto -mt-8 text-center md:w-1/3">
         <Hero class="w-full mb-6" />
-         <div v-if="selected" style="padding-top:10px; width: 100%;">
-          You have selected <code>{{selected.title}}, the {{selected.path}}</code>
-        </div>
-        <div class="autosuggest-container relative z-50 ">
-          <vue-autosuggest
-            v-model="query"
-            :suggestions="filteredOptions"
-            @focus="focusMe"
-            @click="clickHandler"
-            @input="onInputChange"
-            @selected="onSelected"
-            :get-suggestion-value="getSuggestionValue"
-            :input-props="{id:'autosuggest__input', placeholder:'Type in the name of a South African town or city',class:'bg-white shadow-2xl focus:outline-none focus:shadow-outline rounded-full py-4 px-8 text-lg block w-full appearance-none leading-normal text-black placeholder:text-gray-300'}">
-            <div slot-scope="{suggestion}" style="display: flex; align-items: center;">
-              <img :style="{ display: 'flex', width: '25px', height: '25px', borderRadius: '15px', marginRight: '10px'}" :src="suggestion.item.avatar" />
-              <div style="{ display: 'flex', color: 'navyblue'}">{{suggestion.item.title}}</div>
+        <div class="relative z-50">
+          <input
+                id="search"
+                v-model="searchTerm"
+                class="block w-full px-8 py-4 text-lg leading-normal text-black bg-white rounded-full shadow-2xl appearance-none focus:outline-none focus:shadow-outline placeholder:text-gray-300"
+                type="search"
+                results="5"
+                v-focus
+                placeholder="Type in a phrase or search term...">
+            <div class="text-left results">
+                <div v-for="item in searchResults" :key="item.id" class="mx-5">
+                    <g-link :to="item.path" class="block w-full p-4 item">
+                        <figure :v-if="item.image">
+                          <g-image :src="`${item.image}`" width="80" height="80" />
+                        </figure>
+                        <h2>
+                            {{ item.title }} <span :class="item.index | lowerCase" class="badge">{{ item.index }}</span>
+                        </h2>
+                    </g-link>
+                </div>
             </div>
-          </vue-autosuggest>
         </div>
+        <!-- <autocomplete :suggestions="$page.places.edges.map(e => e.node)" value="" :selection.sync="value"></autocomplete> -->
       </div>
     </div>
-    <main class="p-10 relative z-30 bg-white mx-10 shadow-2xl mb-10 rounded-lg">
+    <main class="relative z-30 p-10 mx-10 mb-10 bg-white rounded-lg shadow-2xl">
       <div class="flex justify-between w-full">
-        <h2 class="text-xl sm:text-2xl md:text-3xl font-sans font-bold content-center">Popular Hosts</h2>
-        <g-link to="/stay" class="bg-transparent hover:bg-black text-black font-semibold hover:text-white py-3 px-6 border border-black hover:border-transparent rounded-full">View All</g-link>
+        <h2 class="content-center font-sans text-xl font-bold sm:text-2xl md:text-3xl">Popular Hosts</h2>
+        <g-link to="/stay" class="px-6 py-3 font-semibold text-black bg-transparent border border-black rounded-full hover:bg-black hover:text-white hover:border-transparent">View All</g-link>
       </div>
       <div class="mt-10 grid md:3-cols lg:4-cols xl:5-cols">
-          <div class="card w-full rounded overflow-hidden shadow-lg" v-for="post in $page.hosts.edges" v-bind:key="post.node.id">
+          <div class="w-full overflow-hidden rounded shadow-lg card" v-for="post in $page.hosts.edges" v-bind:key="post.node.id">
               <figure v-if="post.node.image">
-                <g-link :to="`${post.node.path}`" class="h-48 w-full block overflow-hidden">
-                <g-image :src="post.node.image" class="object-cover h-48 w-full"></g-image>
+                <g-link :to="`${post.node.path}`" class="block w-full h-48 overflow-hidden">
+                <g-image :src="post.node.image" class="object-cover w-full h-48"></g-image>
                 </g-link>
               </figure>
               <div class="p-6 card-meta">
-                <h2 class="font-bold text-xl">
-                  <g-link :to="`${post.node.path}`" class="text-red-600 font-bold">{{ post.node.title }}</g-link>
+                <h2 class="text-xl font-bold">
+                  <g-link :to="`${post.node.path}`" class="font-bold text-red-600">{{ post.node.title }}</g-link>
                 </h2>
                 <div>{{ post.node.place }}, {{ post.node.province }}</div>
               </div>
@@ -52,7 +56,7 @@
       <BottomNav />
       <Footer />
     </main>
-    <modal v-show="modal === true">
+    <!-- <modal v-show="modal === true">
       <template slot="header">
         <h2>Greetings fellow earthling!</h2>
       </template>
@@ -62,10 +66,10 @@
       </template>
       <template slot="footer">
         <div class="mt-5">
-          <button v-on:click="modal = false" aria-label="Close modal" type="button" name="button" class="bg-black text-white py-2 px-4 rounded-full">Roger that!</button>
+          <button v-on:click="modal = false" aria-label="Close modal" type="button" name="button" class="px-4 py-2 text-white bg-black rounded-full">Roger that!</button>
         </div>
       </template>
-    </modal>
+    </modal> -->
   </div>
 </template>
 
@@ -83,12 +87,13 @@ query Posts {
       }
     }
   },
-  places: allPlace {
+  places: allPlace ( sortBy: "title", order: ASC) {
     edges {
       node {
         id
         path
         title
+        name
       }
     }
   },
@@ -113,7 +118,10 @@ import BottomNav from "@/components/BottomNav"
 import Footer from "@/components/Footer"
 import Modal from "@/components/Modal"
 import ItemTemplate from '@/components/ItemTemplate.vue'
-import { VueAutosuggest } from "vue-autosuggest";
+import lowerCase from "@/filters/LowerCase";
+
+// import Dropdown from 'vue-simple-search-dropdown';
+// import Autocomplete from '@/components/Autocomplete.vue'
 
 export default {
   components: {
@@ -125,7 +133,13 @@ export default {
     Footer,
     Modal,
     ItemTemplate,
-    VueAutosuggest
+    Dropdown: () =>
+      import ('vue-simple-search-dropdown')
+      .then(m => m.Dropdown)
+      .catch(), 
+  },
+  filters: {
+      lowerCase
   },
   stored: {
     modal: {
@@ -136,84 +150,70 @@ export default {
   },
   data () {
     return {
+      searchTerm: '',
       images: [
         'header-1.jpg',
         'header-2.jpg',
         'header-3.jpg',
         'header-4.jpg'
       ],
-      selectedImage: '',
-      query: "",
-      selected: "",
-      filter: []
-    }
-  },
-  computed: {
-    suggestions() {
-      return this.$page.places.edges
-		},
-    filteredOptions() {
-      return [
-        {
-          data: this.suggestions.node.filter(option => {
-            return option.title.toLowerCase().indexOf(this.query.toLowerCase()) > -1;
-          })
-        }
-      ];
+      selectedImage: ''
     }
   },
   methods: {
     randomItem (items) {
       return items[Math.floor(Math.random()*items.length)];
     },
-       clickHandler(item) {
-      // event fired when clicking on the input
-    },
-    onSelected(item) {
-      this.selected = item.item;
-    },
-    onInputChange(text) {
-      // event fired when the input changes
-      console.log(text)
-    },
-    /**
-     * This is what the <input/> value is set to when you are selecting a suggestion.
-     */
-    getSuggestionValue(suggestion) {
-      return suggestion.item.title;
-    },
-    focusMe(e) {
-      console.log(e) // FocusEvent
+    // submit (selected){
+    //   this.$router.push(this.matches[selected])
+    // }
+  },
+  computed: {
+    urlPrefix: 'https://mzango.com',
+    searchResults () {
+      const searchTerm = this.searchTerm
+      if (searchTerm.length < 3) return []
+      return this.$search.search({ query: searchTerm, limit: 50 })
     }
   }
 }
 </script>
 
 <style>
-.autosuggest-container {
-  display: flex;
-  justify-content: center;
+.results img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-right: 15px;
 }
-.autosuggest-container ul {
-  width: 100%;
-  color: rgba(30, 39, 46,1.0);
-  list-style: none;
-  margin: 0;
-  padding: 0.5rem 0 .5rem 0;
+.results > div > a {
+    display: flex;
 }
-.autosuggest-container li {
-  margin: 0 0 0 0;
-  border-radius: 5px;
-  padding: 0.75rem 0 0.75rem 0.75rem;
-  display: flex;
-  align-items: center;
+.search {
+  position: relative;
+  z-index: 9999;
 }
-.autosuggest-container li:hover {
-  cursor: pointer;
+.results > div {
+    text-align: left;
+    padding: 1px 0 0;
+    position: relative;
+    background: #f7f7f7;
 }
-
-#autosuggest { width: 100%; display: block;}
-.autosuggest__results-item--highlighted {
-  background-color: rgba(51, 217, 178,0.2);
+.results .badge {
+    background: #fff;
+    color: #222;
+    font-size: 13px;
+    padding: 1px 4px;
+    position: absolute;
+    top: 22px;
+    right: 13px;
+}
+.results .place {
+    background: #222;
+    color: #fff;
+}
+.results .host {
+    background: #777;
+    color: #fff;
 }
 </style>

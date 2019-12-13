@@ -1,8 +1,9 @@
 ---
 title: Pretoria
+name: Pretoria
 slug: pretoria
 excerpt: 
-image: "/media/places/pretoria/pretoria-cover.jpg"
+image: "https://mzango.com/media/places/pretoria/pretoria-cover.jpg"
 longitude: 
 latitude: 
 website: 

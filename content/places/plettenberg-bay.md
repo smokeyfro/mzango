@@ -1,8 +1,9 @@
 ---
 title: Plettenberg Bay
+name: Plettenberg Bay
 slug: plettenberg-bay
 excerpt: 
-image: "/media/places/plettenberg-bay/plettenberg-bay-cover.jpg"
+image: "https://mzango.com/media/places/plettenberg-bay/plettenberg-bay-cover.jpg"
 longitude: 
 latitude: 
 website: 

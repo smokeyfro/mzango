@@ -1,8 +1,9 @@
 ---
 title: Port Elizabeth
+name: Port Elizabeth
 slug: port-elizabeth
 excerpt: 
-image: "/media/places/port-elizabeth/port-elizabeth-cover.jpg"
+image: "https://mzango.com/media/places/port-elizabeth/port-elizabeth-cover.jpg"
 longitude: 
 latitude: 
 website: 

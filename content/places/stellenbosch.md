@@ -1,8 +1,9 @@
 ---
 title: Stellenbosch
+name: Stellenbosch
 slug: stellenbosch
 excerpt: 
-image: "/media/places/stellenbosch/stellenbosch-cover.jpg"
+image: "https://mzango.com/media/places/stellenbosch/stellenbosch-cover.jpg"
 longitude: 
 latitude: 
 website: 

@@ -58,6 +58,9 @@ module.exports = {
         component: './src/templates/Activity.vue'
       }
     ],
+    // Post: node => { 
+    //   return `/journal/${node.topic_slug}/${node.slug}`;
+    // },
     Post: [
       {
         path: '/blog/:title',
@@ -78,6 +81,44 @@ module.exports = {
     ],
   },
   plugins: [
+    {
+      use: 'gridsome-plugin-flexsearch',
+      options: {
+        collections: [
+          {
+            typeName: 'Place',
+            indexName: 'Place',
+            fields: ['title', 'excerpt', 'description', 'image']
+          },
+          {
+            typeName: 'Host',
+            indexName: 'Host',
+            fields: ['title', 'excerpt', 'description', 'image']
+          },
+          {
+            typeName: 'Province',
+            indexName: 'Province',
+            fields: ['title', 'excerpt', 'description', 'image']
+          },
+          {
+            typeName: 'District',
+            indexName: 'District',
+            fields: ['title', 'excerpt', 'image']
+          },
+          {
+            typeName: 'Attraction',
+            indexName: 'Attraction',
+            fields: ['title', 'excerpt', 'description', 'image']
+          },
+          {
+            typeName: 'Activity',
+            indexName: 'Activity',
+            fields: ['title', 'excerpt', 'description', 'image']
+          },
+        ],
+        searchFields: ['title', 'searchTerms']
+      }
+    },
     {
       use: "@gridsome/source-filesystem",
       options: {
@@ -186,12 +227,12 @@ module.exports = {
         }
       }
     },
-    {
-      use: '@gridsome/plugin-google-analytics',
-      options: {
-        id: process.env.MZ_GA
-      }
-    },
+    // {
+    //   use: '@gridsome/plugin-google-analytics',
+    //   options: {
+    //     id: process.env.MZ_GA
+    //   }
+    // },
     {
       use: '@gridsome/plugin-sitemap',
       options: {

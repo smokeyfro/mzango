@@ -15,7 +15,7 @@ telephone: (044) 877-1285
 mobile: (081) 355-0137
 email: info@wildernessbackpackers.com
 website: https://wildernessbackpackers.com
-image: "/media/hosts/fairy-knowe/fairy-knowe-backpackers.jpg"
+image: "https://mzango.com/media/hosts/fairy-knowe/fairy-knowe-backpackers.jpg"
 gallery:
 - "/media/hosts/fairy-knowe/braai-area.jpg"
 - "/media/hosts/fairy-knowe/fire-chill-area.jpg"

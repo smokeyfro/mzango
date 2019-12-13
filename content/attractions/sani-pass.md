@@ -2,7 +2,7 @@
 title: Sani Pass
 slug: sani-pass
 excerpt: Sani Pass is a mountain pass located in the West of KwaZulu-Natal, South Africa on the road between Underberg, KwaZulu-Natal and Mokhotlong, Lesotho.
-image: "/media/attractions/sani-pass/sani-pass-kwa-zulu-natal.jpg"
+image: "https://mzango.com/media/attractions/sani-pass/sani-pass-kwa-zulu-natal.jpg"
 longitude: 
 latitude: 
 website: 

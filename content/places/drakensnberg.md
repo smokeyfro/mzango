@@ -1,8 +1,9 @@
 ---
 title: Drakensberg
+name: Drakensberg
 slug: drakensberg
 excerpt: 
-image: "/media/places/drakensberg/drakensberg-cover.jpg"
+image: "https://mzango.com/media/places/drakensberg/drakensberg-cover.jpg"
 longitude: 
 latitude: 
 website: 

@@ -2,7 +2,7 @@
 title: Garden Route
 slug: garden-route
 excerpt: The Garden Route in the Western Cape is one of South Africa's main tourist attractions and is generally thought to stretch from Mossel Bay to St Francis along the Indian ocean and also includes parts of the inland.
-image: "/media/districts/garden-route/garden-route-western-cape.jpg"
+image: "https://mzango.com/media/districts/garden-route/garden-route-western-cape.jpg"
 show_in_nav: true
 province: Western Cape
 province_slug: western-cape
