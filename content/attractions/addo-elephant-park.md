@@ -2,7 +2,7 @@
 title: Addo Elephant Park
 slug: add-elephant-park
 excerpt: Excerpt
-image: "/media/attractions/addo-elephant-park/addo-elephant-park-eastern-cape.jpg"
+image: "https://mzango.com/media/attractions/addo-elephant-park/addo-elephant-park-eastern-cape.jpg"
 longitude: 
 latitude: 
 website: 

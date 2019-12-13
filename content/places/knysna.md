@@ -1,8 +1,9 @@
 ---
 title: Knysna
+name: Knysna
 slug: knysna
 excerpt: Knysna, pearl of the scenic Garden Route, is situated between George and Plettenberg Bay. Perennially green thanks to a Mediterranean Maritime climate with rain falling throughout the year, Knysna is mantled by indigenous forests extending into the Tsitsikamma National Park area.
-image: "/media/places/knysna/knysna-cover.jpg"
+image: "https://mzango.com/media/places/knysna/knysna-cover.jpg"
 longitude: 23.048889
 latitude: 34.035556
 website: http://www.knysna.gov.za/

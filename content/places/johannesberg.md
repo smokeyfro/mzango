@@ -1,8 +1,9 @@
 ---
 title: Johannesburg
+name: Johannesburg
 slug: johannesburg
 excerpt: 
-image: "/media/places/johannesburg/johannesburg-cover.jpg"
+image: "https://mzango.com/media/places/johannesburg/johannesburg-cover.jpg"
 longitude: 
 latitude: 
 website: 

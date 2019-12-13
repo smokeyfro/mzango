@@ -1,8 +1,9 @@
 ---
 title: Wilderness
+name: Wilderness
 slug: wilderness
 excerpt: Wilderness is a seaside town on the Garden Route of the southern Cape in South Africa.
-image: "/media/places/wilderness/wilderness-cover.jpg"
+image: "https://mzango.com/media/places/wilderness/wilderness-cover.jpg"
 longitude: 22.583333
 latitude: -33.983333
 website: na

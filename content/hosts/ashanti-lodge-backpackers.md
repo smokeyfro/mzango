@@ -15,7 +15,7 @@ telephone:
 mobile: 
 email: email@domain.com
 website: ''
-image: "/media/hosts/ashanti/ashanti-backpackers-cape-town.jpg"
+image: "https://mzango.com/media/hosts/ashanti/ashanti-backpackers-cape-town.jpg"
 gallery: []
 volunteer_platform: WorkAway
 accepting_volunteers: true

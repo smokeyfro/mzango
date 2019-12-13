@@ -2,7 +2,7 @@
 title: Voorktrekker Monument
 slug: voortrekker-monument
 excerpt: The Voortrekker Monument is located just south of Pretoria in South Africa. This massive granite structure is prominently located on a hilltop, and was raised to commemorate the Voortrekkers who left the Cape Colony between 1835 and 1854.
-image: "/media/attractions/voortrekker-monument/voortrekker-monument-pretoria.jpg"
+image: "https://mzango.com/media/attractions/voortrekker-monument/voortrekker-monument-pretoria.jpg"
 longitude: 28.1775
 latitude: -25.776389
 website: 

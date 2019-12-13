@@ -1,8 +1,9 @@
 ---
 title: Hogsback
+name: Hogsback
 slug: hogsback
 excerpt: Hogsback is a village in the Amathole Mountains in the Eastern Cape Province, South Africa.
-image: "/media/places/hogsback/hogsback-cover.jpg"
+image: "https://mzango.com/media/places/hogsback/hogsback-cover.jpg"
 longitude: 26.9323
 latitude: 32.5952
 website: na

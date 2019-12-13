@@ -15,7 +15,7 @@ telephone:
 mobile: 
 email: email@domain.com
 website: ''
-image: "/media/hosts/island-vibe/island-vibe-backpackers-jefferys-bay.jpg"
+image: "https://mzango.com/media/hosts/island-vibe/island-vibe-backpackers-jefferys-bay.jpg"
 gallery: []
 volunteer_platform: WorkAway
 accepting_volunteers: true

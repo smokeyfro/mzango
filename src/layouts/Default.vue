@@ -11,7 +11,7 @@
       <Footer />
     </main>
     </transition>
-    <modal v-show="modal === true">
+    <!-- <modal v-show="modal === true">
       <template slot="header">
         <h2>Greetings fellow earthling!</h2>
       </template>
@@ -24,7 +24,7 @@
           <button v-on:click="modal = false" aria-label="Close modal" type="button" name="button" class="bg-black text-white py-2 px-4 rounded-full">Roger that!</button>
         </div>
       </template>
-    </modal>
+    </modal> -->
   </div>
 </template>
 
@@ -33,14 +33,14 @@ import config from '~/.temp/config.js'
 import Header from '~/components/Header.vue'
 import BottomNav from '@/components/BottomNav'
 import Footer from '@/components/Footer'
-import Modal from '@/components/Modal'
+// import Modal from '@/components/Modal'
 
 export default {
   components: {
     Header,
     BottomNav,
     Footer,
-    Modal
+    // Modal
   },
   computed: {
     config () {

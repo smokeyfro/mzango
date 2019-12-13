@@ -1,8 +1,9 @@
 ---
 title: Richards Bay
+name: Richards Bay
 slug: richards-bay
 excerpt: 
-image: "/media/places/richards-bay/richards-bay-cover.jpg"
+image: "https://mzango.com/media/places/richards-bay/richards-bay-cover.jpg"
 longitude: 
 latitude: 
 website: 

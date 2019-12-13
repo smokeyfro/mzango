@@ -15,7 +15,7 @@ telephone:
 mobile: 
 email: email@domain.com
 website: ''
-image: "/media/hosts/atlantic-point/atlantic-point-cape-town.jpg"
+image: "https://mzango.com/media/hosts/atlantic-point/atlantic-point-cape-town.jpg"
 gallery: []
 volunteer_platform: WorkAway
 accepting_volunteers: true

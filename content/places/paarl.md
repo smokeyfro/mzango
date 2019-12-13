@@ -1,8 +1,9 @@
 ---
 title: Paarl
+name: Oudstoorn
 slug: paarl
 excerpt: 
-image: "/media/places/paarl/paarl-cover.jpg"
+image: "https://mzango.com/media/places/paarl/paarl-cover.jpg"
 longitude: 
 latitude: 
 website: 

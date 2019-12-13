@@ -2,7 +2,7 @@
 title: Bloukrans Bungy
 slug: bloukrans-bungy
 excerpt: Bloukrans Bridge Bungy is one of the world's highest commercial bridge bungy at 216 metres above the Bloukrans River. It is situated at Bloukrans Bridge on the N2 Highway at the border between the Eastern Cape and the Western Cape in the Tsitsikamma area of South Africa's Garden Route.
-image: "/media/attractions/bloukrans-bungy/bloukrans-bungy-natures-valley.jpg"
+image: "https://mzango.com/media/attractions/bloukrans-bungy/bloukrans-bungy-natures-valley.jpg"
 longitude: 23.647222
 latitude: -33.965278
 website: https://www.faceadrenalin.com/

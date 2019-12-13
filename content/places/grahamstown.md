@@ -1,8 +1,9 @@
 ---
 title: Grahamstown
+name: Grahamstown
 slug: grahamstown
 excerpt: 
-image: "/media/places/grahamstown/grahamstown-cover.jpg"
+image: "https://mzango.com/media/places/grahamstown/grahamstown-cover.jpg"
 longitude: 
 latitude: 
 website: 

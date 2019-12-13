@@ -2,6 +2,6 @@
 title: Cycling
 slug: cycling
 excerpt: Excerpt for the cycling.
-image: "/media/activities/cycling/cycling.jpg"
+image: "https://mzango.com/media/activities/cycling/cycling.jpg"
 ---
 Cycling content
