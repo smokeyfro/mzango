@@ -73,7 +73,7 @@ query Place ($path: String!, $slug: String) {
         title
         excerpt
         path
-        image (width: 80, height: 80, quality: 90)
+        image
         province
         place
         district
@@ -87,7 +87,7 @@ query Place ($path: String!, $slug: String) {
         title
         excerpt
         path
-        image (width: 80, height: 80, quality: 90)
+        image
         province
         province_slug
         place
@@ -104,7 +104,7 @@ query Place ($path: String!, $slug: String) {
         author
         date (format: "DD MMMM YYYY")
         tags
-        image (width: 400, height: 400, quality: 90)
+        image
         path
       }
     }
