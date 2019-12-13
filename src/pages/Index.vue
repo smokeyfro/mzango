@@ -80,7 +80,7 @@ query Posts {
       node {
         id
         title
-        image(width: 400, height: 200, quality: 90)
+        imageS
         path
         place
         province
