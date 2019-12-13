@@ -82,6 +82,44 @@ module.exports = {
   },
   plugins: [
     {
+      use: 'gridsome-plugin-flexsearch',
+      options: {
+        collections: [
+          {
+            typeName: 'Place',
+            indexName: 'Place',
+            fields: ['title', 'excerpt', 'description', 'image']
+          },
+          {
+            typeName: 'Host',
+            indexName: 'Host',
+            fields: ['title', 'excerpt', 'description', 'image']
+          },
+          {
+            typeName: 'Province',
+            indexName: 'Province',
+            fields: ['title', 'excerpt', 'description', 'image']
+          },
+          {
+            typeName: 'District',
+            indexName: 'District',
+            fields: ['title', 'excerpt', 'image']
+          },
+          {
+            typeName: 'Attraction',
+            indexName: 'Attraction',
+            fields: ['title', 'excerpt', 'description', 'image']
+          },
+          {
+            typeName: 'Activity',
+            indexName: 'Activity',
+            fields: ['title', 'excerpt', 'description', 'image']
+          },
+        ],
+        searchFields: ['title', 'searchTerms']
+      }
+    },
+    {
       use: "@gridsome/source-filesystem",
       options: {
         path: "content/provinces/**/*.md",

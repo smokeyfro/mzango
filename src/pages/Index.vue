@@ -1,40 +1,53 @@
 <template>
   <div class="relative">
-    <Header class="fixed top-0 w-full z-30" />
-    <div class="h-screen w-full overflow-hidden fixed top-0">
+    <Header class="fixed top-0 z-30 w-full" />
+    <div class="fixed top-0 w-full h-screen overflow-hidden">
       <!-- <g-image :src="`/assets/static/media/site/${selectedImage}`" class="object-cover object-bottom h-full" /> -->
       <g-image src="../../media/site/hero-pink.jpg" class="object-cover object-bottom h-full" />
     </div>
-    <div class="h-screen flex items-center justify-center content-center">
-      <div class="w-1/3 mx-auto text-center -mt-8">
+    <div class="flex items-center content-center justify-center h-screen hero-wrap">
+      <div class="w-2/3 mx-auto -mt-8 text-center md:w-1/3">
         <Hero class="w-full mb-6" />
-        <Dropdown
-            :options="$page.places.edges.map(e => e.node)"
-            :disabled="false"
-            name="dropdown"
-            :maxItem="600"
-            class="text-left"
-            placeholder="Please select an option">
-        </Dropdown>
-        <button type="submit" v-on:click.prevent="submit()" class="relative z-50">Go</button>
+        <div class="relative z-50">
+          <input
+                id="search"
+                v-model="searchTerm"
+                class="block w-full px-8 py-4 text-lg leading-normal text-black bg-white rounded-full shadow-2xl appearance-none focus:outline-none focus:shadow-outline placeholder:text-gray-300"
+                type="search"
+                results="5"
+                v-focus
+                placeholder="Type in a phrase or search term...">
+            <div class="text-left results">
+                <div v-for="(item, $index) in searchResults" :key="item.id" class="mx-5">
+                    <g-link :to="item.path" class="block w-full p-4 item">
+                        <figure :v-if="item.image">
+                          <g-image :src="item.image" />
+                        </figure>
+                        <h2>
+                            {{ item.title }} <span :class="item.index | lowerCase" class="badge">{{ item.index }}</span>
+                        </h2>
+                    </g-link>
+                </div>
+            </div>
+        </div>
         <!-- <autocomplete :suggestions="$page.places.edges.map(e => e.node)" value="" :selection.sync="value"></autocomplete> -->
       </div>
     </div>
-    <main class="p-10 relative z-30 bg-white mx-10 shadow-2xl mb-10 rounded-lg">
+    <main class="relative z-30 p-10 mx-10 mb-10 bg-white rounded-lg shadow-2xl">
       <div class="flex justify-between w-full">
-        <h2 class="text-xl sm:text-2xl md:text-3xl font-sans font-bold content-center">Popular Hosts</h2>
-        <g-link to="/stay" class="bg-transparent hover:bg-black text-black font-semibold hover:text-white py-3 px-6 border border-black hover:border-transparent rounded-full">View All</g-link>
+        <h2 class="content-center font-sans text-xl font-bold sm:text-2xl md:text-3xl">Popular Hosts</h2>
+        <g-link to="/stay" class="px-6 py-3 font-semibold text-black bg-transparent border border-black rounded-full hover:bg-black hover:text-white hover:border-transparent">View All</g-link>
       </div>
       <div class="mt-10 grid md:3-cols lg:4-cols xl:5-cols">
-          <div class="card w-full rounded overflow-hidden shadow-lg" v-for="post in $page.hosts.edges" v-bind:key="post.node.id">
+          <div class="w-full overflow-hidden rounded shadow-lg card" v-for="post in $page.hosts.edges" v-bind:key="post.node.id">
               <figure v-if="post.node.image">
-                <g-link :to="`${post.node.path}`" class="h-48 w-full block overflow-hidden">
-                <g-image :src="post.node.image" class="object-cover h-48 w-full"></g-image>
+                <g-link :to="`${post.node.path}`" class="block w-full h-48 overflow-hidden">
+                <g-image :src="post.node.image" class="object-cover w-full h-48"></g-image>
                 </g-link>
               </figure>
               <div class="p-6 card-meta">
-                <h2 class="font-bold text-xl">
-                  <g-link :to="`${post.node.path}`" class="text-red-600 font-bold">{{ post.node.title }}</g-link>
+                <h2 class="text-xl font-bold">
+                  <g-link :to="`${post.node.path}`" class="font-bold text-red-600">{{ post.node.title }}</g-link>
                 </h2>
                 <div>{{ post.node.place }}, {{ post.node.province }}</div>
               </div>
@@ -53,7 +66,7 @@
       </template>
       <template slot="footer">
         <div class="mt-5">
-          <button v-on:click="modal = false" aria-label="Close modal" type="button" name="button" class="bg-black text-white py-2 px-4 rounded-full">Roger that!</button>
+          <button v-on:click="modal = false" aria-label="Close modal" type="button" name="button" class="px-4 py-2 text-white bg-black rounded-full">Roger that!</button>
         </div>
       </template>
     </modal> -->
@@ -105,7 +118,9 @@ import BottomNav from "@/components/BottomNav"
 import Footer from "@/components/Footer"
 import Modal from "@/components/Modal"
 import ItemTemplate from '@/components/ItemTemplate.vue'
-import Dropdown from 'vue-simple-search-dropdown';
+import lowerCase from "@/filters/LowerCase";
+
+// import Dropdown from 'vue-simple-search-dropdown';
 // import Autocomplete from '@/components/Autocomplete.vue'
 
 export default {
@@ -118,7 +133,13 @@ export default {
     Footer,
     Modal,
     ItemTemplate,
-    Dropdown
+    Dropdown: () =>
+      import ('vue-simple-search-dropdown')
+      .then(m => m.Dropdown)
+      .catch(), 
+  },
+  filters: {
+      lowerCase
   },
   stored: {
     modal: {
@@ -129,6 +150,7 @@ export default {
   },
   data () {
     return {
+      searchTerm: '',
       images: [
         'header-1.jpg',
         'header-2.jpg',
@@ -145,10 +167,43 @@ export default {
     // submit (selected){
     //   this.$router.push(this.matches[selected])
     // }
+  },
+  computed: {
+    searchResults () {
+      const searchTerm = this.searchTerm
+      if (searchTerm.length < 3) return []
+      return this.$search.search({ query: searchTerm, limit: 50 })
+    }
   }
 }
 </script>
 
 <style>
-
+.search {
+  position: relative;
+  z-index: 9999;
+}
+.results > div {
+    text-align: left;
+    padding: 1px 0 0;
+    position: relative;
+    background: #f7f7f7;
+}
+.results .badge {
+    background: #fff;
+    color: #222;
+    font-size: 13px;
+    padding: 1px 4px;
+    position: absolute;
+    top: 22px;
+    right: 13px;
+}
+.results .place {
+    background: #222;
+    color: #fff;
+}
+.results .host {
+    background: #777;
+    color: #fff;
+}
 </style>
