@@ -15,7 +15,7 @@ telephone: ''
 mobile: '+27877016180'
 email: themoylife@gmail.com
 website: https://www.moyct.com
-image: "https://mzango.com/media//hosts/moy/moy-cape-town.jpg'
+image: "https://mzango.com/media//hosts/moy/moy-cape-town.jpg"
 gallery: []
 volunteer_platform: 
 accepting_volunteers: false
