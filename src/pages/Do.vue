@@ -2,8 +2,8 @@
   <Layout class="activities">
     <div>
       <header>
-        <h1 class="text-4xl sm:text-5xl md:text-6xl font-sans font-bold mb-1">Things to Do</h1>
-        <p class="text-grey-dark text-lg sm:text-3xl">Whether you're a surfer, birder, adrenaline junkie, history buff, wine connoisseur or foodie - South Africa has it all. Plan your ulitimate trip using one of the starters below.</p>
+        <h1 class="mb-1 font-sans text-4xl font-bold sm:text-5xl md:text-6xl">Things to Do</h1>
+        <p class="text-lg text-grey-dark sm:text-3xl">Whether you're a surfer, birder, adrenaline junkie, history buff, wine connoisseur or foodie - South Africa has it all. Plan your ulitimate trip using one of the starters below.</p>
       </header>
       <section class="mt-10 grid md:3-cols lg:4-cols xl:5-cols">
         <activity-card v-for="edge in $page.posts.edges" :key="edge.node.id" :post="edge.node" />
@@ -39,7 +39,7 @@ export default {
           title
           excerpt
           path
-          image (width: 400, height: 400, quality: 90)
+          image
         }
       }
     }
