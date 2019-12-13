@@ -3,7 +3,7 @@ title: Oudstoorn
 name: Oudstoorn
 slug: oudstoorn
 excerpt: 
-image: "/media/places/wilderness/wilderness-cover.jpg"
+image: "https://mzango.com/media/places/wilderness/wilderness-cover.jpg"
 longitude: 
 latitude: 
 website: 

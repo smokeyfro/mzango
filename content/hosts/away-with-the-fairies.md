@@ -15,7 +15,7 @@ telephone:
 mobile: 
 email: email@domain.com
 website: ''
-image: "/media/hosts/away-with-the-fairies/away-with-the-fairies-backpackers-hogsback.jpg"
+image: "https://mzango.com/media/hosts/away-with-the-fairies/away-with-the-fairies-backpackers-hogsback.jpg"
 gallery: []
 volunteer_platform: WorkAway
 accepting_volunteers: true

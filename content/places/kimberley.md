@@ -3,7 +3,7 @@ title: Kimberley
 name: Kimberley
 slug: kimberley
 excerpt: 
-image: "/media/places/kimberley/kimberley-cover.jpg"
+image: "https://mzango.com/media/places/kimberley/kimberley-cover.jpg"
 longitude: 
 latitude: 
 website: 

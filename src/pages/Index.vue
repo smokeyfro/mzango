@@ -21,7 +21,7 @@
                 <div v-for="item in searchResults" :key="item.id" class="mx-5">
                     <g-link :to="item.path" class="block w-full p-4 item">
                         <figure :v-if="item.image">
-                          <g-image :src="`${item.image}`" />
+                          <g-image :src="`${item.image}`" width="80" height="80" />
                         </figure>
                         <h2>
                             {{ item.title }} <span :class="item.index | lowerCase" class="badge">{{ item.index }}</span>
@@ -180,6 +180,15 @@ export default {
 </script>
 
 <style>
+.results img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-right: 15px;
+}
+.results > div > a {
+    display: flex;
+}
 .search {
   position: relative;
   z-index: 9999;

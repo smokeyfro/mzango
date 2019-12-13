@@ -3,7 +3,7 @@ title: Hermanus
 name: Hermanus
 slug: hermanus
 excerpt: 
-image: "/media/places/hermanus/hermanus-cover.jpg"
+image: "https://mzango.com/media/places/hermanus/hermanus-cover.jpg"
 longitude: 
 latitude: 
 website: 

@@ -15,7 +15,7 @@ telephone: 0448770549
 mobile: 0828280714
 email: info@wildernessbeachhouse.com
 website: http://www.wildernessbeachhouse.com/
-image: "/media/hosts/beach-house/beach-house-backpackers-wilderness.jpg"
+image: "https://mzango.com/media/hosts/beach-house/beach-house-backpackers-wilderness.jpg"
 gallery: []
 volunteer_platform: WorkAway
 accepting_volunteers: true

@@ -3,7 +3,7 @@ title: Coffee Bay
 name: Coffee Bay
 slug: coffee-bay
 excerpt: 
-image: "/media/places/coffee-bay/coffee-bay-cover.jpg"
+image: "https://mzango.com/media/places/coffee-bay/coffee-bay-cover.jpg"
 longitude: 
 latitude: 
 website: 

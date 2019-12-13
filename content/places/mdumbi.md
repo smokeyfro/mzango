@@ -3,7 +3,7 @@ title: Mdumbi
 name: Mdumbi
 slug: mdumbi
 excerpt: 
-image: "/media/places/mdumbi/mdumbi-cover.jpg"
+image: "https://mzango.com/media/places/mdumbi/mdumbi-cover.jpg"
 longitude: 
 latitude: 
 website: 

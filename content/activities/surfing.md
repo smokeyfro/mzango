@@ -2,6 +2,6 @@
 title: Surfing
 slug: surfing
 excerpt: Excerpt for the surfing.
-image: "/media/activities/surfing/surfing.jpg"
+image: "https://mzango.com/media/activities/surfing/surfing.jpg"
 ---
 Surfing content

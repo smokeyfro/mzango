@@ -2,7 +2,7 @@
 title: Ostrich Farm
 slug: ostrich-farm
 excerpt: The Highgate Ostrich Show Farm is an ostrich farm located 10 kilometres south of Oudtshoorn in South Africa.
-image: "/media/attractions/ostrich-farm/ostrich-farm-oudsthoorn.jpg"
+image: "https://mzango.com/media/attractions/ostrich-farm/ostrich-farm-oudsthoorn.jpg"
 longitude: 
 latitude: 
 website: https://highgate.co.za/

@@ -3,7 +3,7 @@ title: Durban
 name: Durban
 slug: durban
 excerpt: 
-image: "/media/places/durban/durban-cover.jpg"
+image: "https://mzango.com/media/places/durban/durban-cover.jpg"
 longitude: 
 latitude: 
 website: 

@@ -2,7 +2,7 @@
 title: Augrabies Falls
 slug: augrabies-falls
 excerpt: Augrabies Falls National Park is a national park located around the Augrabies Falls, about 120 km west of Upington in the Northern Cape Province, South Africa. It was established in 1966.
-image: "/media/attractions/augrabies-falls/augrabies-falls-northern-cape.jpg"
+image: "https://mzango.com/media/attractions/augrabies-falls/augrabies-falls-northern-cape.jpg"
 longitude: 20.338333
 latitude: -28.591111
 website: https://www.sanparks.org/parks/augrabies/

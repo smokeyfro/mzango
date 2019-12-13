@@ -3,7 +3,7 @@ title: Natures Valley
 name: Natures Valley
 slug: natures-valley
 excerpt: 
-image: "/media/places/natures-valley/natures-valley-cover.jpg"
+image: "https://mzango.com/media/places/natures-valley/natures-valley-cover.jpg"
 longitude: 
 latitude: 
 website: 

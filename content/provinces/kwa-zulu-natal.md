@@ -1,7 +1,7 @@
 ---
 title: Kwa-Zulu Natal
 slug: kwa-zulu-natal
-image: "/media/provinces/western-cape/western-cape.jpg"
+image: "https://mzango.com/media/provinces/western-cape/western-cape.jpg"
 province_color: '#FB8072'
 excerpt: 'Also referred to as KZN and known as "the garden province", Kwa-Zulu Natal is a province of South Africa that was created in 1994 when the Zulu bantustan of KwaZulu and Natal Province were merged. It is located in the southeast of the country, enjoying a long shoreline beside the Indian Ocean and sharing borders with three other provinces and the countries of Mozambique, Eswatini and Lesotho. Its capital is Pietermaritzburg and its largest city is Durban. It is the 2nd most populous province in South Africa, with slightly fewer residents than Gauteng.'
 ---

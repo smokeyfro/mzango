@@ -4,19 +4,19 @@
       <div>
         <div>
           <h1 class="title" v-html="$page.post.title" />
-          <div class="text-gray-800 text-xl mb-5 mr-20" v-html="$page.post.excerpt" />
-          <figure v-if="$page.post.image" class="rounded-lg overflow-hidden mb-10">
-            <g-image :src="$page.post.image"></g-image>
+          <div class="mb-5 mr-20 text-xl text-gray-800" v-html="$page.post.excerpt" />
+          <figure v-if="$page.post.image" class="mb-10 overflow-hidden rounded-lg">
+            <g-image :src="$page.post.image" width="1500" height="600" ></g-image>
           </figure>
         </div>
         <div class="flex flex-wrap">
           <div v-if="$page.post.content" class="w-1/2">
-            <div v-html="$page.post.content" class="content markdown mr-10" />
+            <div v-html="$page.post.content" class="mr-10 content markdown" />
           </div>
           <div class="w-1/2">
             <ClientOnly>
                 <template v-if="$page.post.latitude" class="">
-                  <h2 class="font-sans font-bold text-black mb-8 text-2xl sm:text-4xl">Current Weather</h2>
+                  <h2 class="mb-8 font-sans text-2xl font-bold text-black sm:text-4xl">Current Weather</h2>
                   <vue-weather-widget
                       api-key="408dbe336740c8c807f4a1c1ecf60e98"
                       :latitude="$page.post.latitude"
@@ -29,20 +29,20 @@
               </template>
             </ClientOnly>
             <template v-if="$page.hosts.edges">
-              <h2 class="font-sans font-bold text-black mt-6 mb-8 text-2xl sm:text-4xl">Places to Stay</h2>
-              <div class="grid mt-5">
+              <h2 class="mt-6 mb-8 font-sans text-2xl font-bold text-black sm:text-4xl">Places to Stay</h2>
+              <div class="mt-5 grid">
                 <host-card-small class="" v-for="edge in $page.hosts.edges" :key="edge.node.id" :post="edge.node" />
               </div>
             </template>
             <template v-if="$page.attractions.edges" class="mt-20">
-              <h2 class="font-sans font-bold text-black my-6 text-2xl sm:text-4xl">Things to Do</h2>
-              <div class="grid mt-5">
+              <h2 class="my-6 font-sans text-2xl font-bold text-black sm:text-4xl">Things to Do</h2>
+              <div class="mt-5 grid">
                 <attraction-card-small v-for="edge in $page.attractions.edges" :key="edge.node.id" :post="edge.node" />
               </div>
             </template>
             <template v-if="$page.posts.edges" class="mt-20">
-              <h2 class="font-sans font-bold text-black my-6 text-2xl sm:text-4xl">Related Articles</h2>
-              <div class="grid mt-5">
+              <h2 class="my-6 font-sans text-2xl font-bold text-black sm:text-4xl">Related Articles</h2>
+              <div class="mt-5 grid">
                 <post-card class="" v-for="edge in $page.posts.edges" :key="edge.node.id" :post="edge.node" />
               </div>
             </template>
@@ -60,7 +60,6 @@ query Place ($path: String!, $slug: String) {
     id
     path
     slug
-    image (width: 1500, height: 600, quality: 90)
     excerpt
     latitude
     longitude

@@ -15,7 +15,7 @@ telephone:
 mobile: 
 email: email@domain.com
 website: ''
-image: "/media/hosts/african-ubuntu/african-ubuntu-backpackers-jeffreys-bay.jpg"
+image: "https://mzango.com/media/hosts/african-ubuntu/african-ubuntu-backpackers-jeffreys-bay.jpg"
 gallery: []
 volunteer_platform: WorkAway
 accepting_volunteers: true

@@ -2,7 +2,7 @@
 title: Valley of a Thousand Hills
 slug: valley-of-a-thousand-hills
 excerpt: The breathtaking Valley of a Thousand Hills is an exciting component of Durban and South Africa's province of KwaZulu-Natal - the Kingdom of the Zulu. The Valley of 1000 Hills is one of those few holiday destinations that has something for everyone. Unspoilt nature, wildlife, magnificent scenery, wining and dining, and warm country hospitality just a half an hour's drive from the centre of Durban. The area is named after the thousands of hills which tumble down to the mighty Umgeni River, which flows from the distant Drakensberg Mountains to the warm inviting Indian Ocean.
-image: "/media/attractions/valley-of-a-thousand-hills/valley-of-a-thousand-hills-kwa-zulu-natal.jpg"
+image: "https://mzango.com/media/attractions/valley-of-a-thousand-hills/valley-of-a-thousand-hills-kwa-zulu-natal.jpg"
 longitude: 
 latitude: 
 website: http://www.1000hillstourism.co.za/

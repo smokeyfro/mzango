@@ -3,7 +3,7 @@ title: Mossel Bay
 name: Mossel Bay
 slug: mossel-bay
 excerpt: 
-image: "/media/places/mossel-bay/mossel-bay-cover.jpg"
+image: "https://mzango.com/media/places/mossel-bay/mossel-bay-cover.jpg"
 longitude: 
 latitude: 
 website: 

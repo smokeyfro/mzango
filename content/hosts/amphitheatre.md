@@ -15,7 +15,7 @@ telephone:
 mobile: 
 email: email@domain.com
 website: ''
-image: "/media/hosts/amphitheatre/amphitheatre-backpackers-drakensberg.jpg"
+image: "https://mzango.com/media/hosts/amphitheatre/amphitheatre-backpackers-drakensberg.jpg"
 gallery: []
 volunteer_platform: WorkAway
 accepting_volunteers: true

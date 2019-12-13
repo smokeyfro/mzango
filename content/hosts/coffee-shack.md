@@ -15,7 +15,7 @@ telephone:
 mobile: 
 email: email@domain.com
 website: ''
-image: "/media/hosts/coffee-shack/coffee-shack-coffee-bay.jpg"
+image: "https://mzango.com/media/hosts/coffee-shack/coffee-shack-coffee-bay.jpg"
 gallery: []
 volunteer_platform: WorkAway
 accepting_volunteers: true
