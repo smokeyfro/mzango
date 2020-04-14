@@ -1,5 +1,7 @@
 {
-    "env": {
-      "MZ_GA": "@mz-ga"
-    }
+  "env": {
+    "MZ_GA": "@mz-ga",
+    "MZ_STRAPI_USERNAME": "@mz-strapi-username",
+    "MZ_STRAPI_PASSWORD": "@mz-strapi-password"
   }
+}

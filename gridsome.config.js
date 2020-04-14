@@ -82,6 +82,18 @@ module.exports = {
   },
   plugins: [
     {
+      use: '@gridsome/source-strapi',
+      options: {
+        apiURL: 'http://localhost:1337',
+        queryLimit: 1000,
+        contentTypes: ['place', 'user'],
+        loginData: {
+          identifier: '',
+          password: ''
+        }
+      }
+    },
+    {
       use: 'gridsome-plugin-flexsearch',
       options: {
         collections: [
