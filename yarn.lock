@@ -700,13 +700,6 @@
     sort-package-json "^1.15.0"
     update-notifier "^3.0.1"
 
-"@gridsome/plugin-google-analytics@^0.1.0":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@gridsome/plugin-google-analytics/-/plugin-google-analytics-0.1.0.tgz#f2fdffdb05dd2928ca85c4a0d64c7e497a36ee49"
-  integrity sha512-IUuIj1z0BMtNa4NPRyBP3rYGyww+RWypsHTJ7WDdIj/BuH1x7BR9cDn7kskfG5azUi1LV0lJX329Te077oG07A==
-  dependencies:
-    vue-analytics "^5.16.1"
-
 "@gridsome/plugin-sitemap@^0.2.3":
   version "0.2.3"
   resolved "https://registry.yarnpkg.com/@gridsome/plugin-sitemap/-/plugin-sitemap-0.2.3.tgz#44c2655d97349f8a02a76a38452313442b6cdab5"
@@ -8952,11 +8945,6 @@ vm-browserify@^1.0.1:
   resolved "https://registry.yarnpkg.com/vm-browserify/-/vm-browserify-1.1.2.tgz#78641c488b8e6ca91a75f511e7a3b32a86e5dda0"
   integrity sha512-2ham8XPWTONajOR0ohOKOHXkm3+gaBmGut3SRuu75xLd/RRaY6vqgh8NBYYk7+RW3u5AtzPQZG8F10LHkl0lAQ==
 
-vue-analytics@^5.16.1:
-  version "5.19.1"
-  resolved "https://registry.yarnpkg.com/vue-analytics/-/vue-analytics-5.19.1.tgz#ee1504328d44b2990bbcf3a191608a73758f39f4"
-  integrity sha512-vNMgKJn85sHw+7Q/iat+yVcUnHLd3sgXiFJvm7+NuyN3Wa+6TQY8G0yK/pUCJFW0bA+3QNAe6tPtUvq8mapG7A==
-
 vue-autosuggest@^2.0.4:
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/vue-autosuggest/-/vue-autosuggest-2.0.4.tgz#ef1bc2eeac6f569d9b638d3af727400b34d19677"
@@ -9298,9 +9286,9 @@ yaml-loader@^0.5.0:
     js-yaml "^3.5.2"
 
 yargs-parser@^15.0.0:
-  version "15.0.0"
-  resolved "https://registry.yarnpkg.com/yargs-parser/-/yargs-parser-15.0.0.tgz#cdd7a97490ec836195f59f3f4dbe5ea9e8f75f08"
-  integrity sha512-xLTUnCMc4JhxrPEPUYD5IBR1mWCK/aT6+RJ/K29JY2y1vD+FhtgKK0AXRWvI262q3QSffAQuTouFIKUuHX89wQ==
+  version "15.0.1"
+  resolved "https://registry.yarnpkg.com/yargs-parser/-/yargs-parser-15.0.1.tgz#54786af40b820dcb2fb8025b11b4d659d76323b3"
+  integrity sha512-0OAMV2mAZQrs3FkNpDQcBk1x5HXb8X4twADss4S0Iuk+2dGnLOE/fRHrsYm542GduMveyA77OF4wrNJuanRCWw==
   dependencies:
     camelcase "^5.0.0"
     decamelize "^1.2.0"
